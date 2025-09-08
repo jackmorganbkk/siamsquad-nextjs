@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://siamsquad.com/sitemap.xml
+Sitemap: https://siamsquad.com/sitemap-th.xml
+Sitemap: https://siamsquad.com/sitemap-en.xml  
+Sitemap: https://siamsquad.com/sitemap-ja.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Block access to admin areas (if any)
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Allow all images
+Allow: /images/
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+Allow: /*.svg$
+
+# Host directive
+Host: https://siamsquad.com

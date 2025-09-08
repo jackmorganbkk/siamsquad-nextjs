@@ -94,7 +94,7 @@ export default function QuotationSection() {
             >
               <div className="text-green-600 text-2xl mb-2">✓</div>
               <h3 className="text-green-800 font-semibold text-lg mb-2">Thank you for your inquiry!</h3>
-              <p className="text-green-700">We'll get back to you within 24 hours with a detailed quotation.</p>
+              <p className="text-green-700">We&apos;ll get back to you within 24 hours with a detailed quotation.</p>
             </motion.div>
           )}
 

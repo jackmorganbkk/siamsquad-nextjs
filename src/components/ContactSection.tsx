@@ -112,7 +112,7 @@ export default function ContactSection() {
               Ready to Transform Your Business?
             </h3>
             <p className="text-lg md:text-xl mb-8 text-white/90">
-              Let's discuss your project and create something amazing together.
+              Let&apos;s discuss your project and create something amazing together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button

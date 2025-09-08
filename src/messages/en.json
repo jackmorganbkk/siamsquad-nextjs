@@ -1,0 +1,118 @@
+{
+  "navigation": {
+    "home": "Home",
+    "process": "Process",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Professional Digital Solutions",
+    "title": "Professional Digital Solutions",
+    "subtitle": "Creating beautiful websites, mobile apps, and digital marketing solutions that help Thai businesses grow and succeed online",
+    "cta_quote": "Get Free Quote",
+    "cta_portfolio": "View Portfolio",
+    "stats": {
+      "projects": "Projects",
+      "uptime": "Uptime",
+      "support": "Support",
+      "years": "Years"
+    },
+    "scroll_text": "Explore Solutions"
+  },
+  "process": {
+    "title": "How We Work With You",
+    "subtitle": "Our simple 6-step process to bring your digital vision to life",
+    "steps": {
+      "discovery": {
+        "title": "DISCOVERY",
+        "heading": "Understanding Your Business Needs",
+        "description": "We start by listening to your goals and understanding exactly what your business needs. We discuss your requirements, budget, and timeline to create the perfect plan for your project.",
+        "duration": "1-2 weeks"
+      },
+      "design": {
+        "title": "DESIGN",
+        "heading": "Creating Beautiful & User-Friendly Designs",
+        "description": "Our designers create beautiful, modern layouts that your customers will love. We focus on making everything easy to use and visually appealing across all devices.",
+        "duration": "2-3 weeks"
+      },
+      "development": {
+        "title": "DEVELOPMENT",
+        "heading": "Building Your Solution with Modern Technology",
+        "description": "Our experienced developers bring the designs to life using the latest, reliable technology. We build everything step-by-step and keep you updated on our progress.",
+        "duration": "4-8 weeks"
+      },
+      "testing": {
+        "title": "TESTING",
+        "heading": "Ensuring Everything Works Perfectly",
+        "description": "We thoroughly test everything to make sure it works flawlessly on all devices and browsers. We check for speed, security, and user experience to ensure top quality.",
+        "duration": "1-2 weeks"
+      },
+      "deployment": {
+        "title": "DEPLOYMENT",
+        "heading": "Launching Your Project Live",
+        "description": "We handle all the technical setup to get your website or app live and running smoothly. We make sure everything is secure, fast, and ready for your customers.",
+        "duration": "3-5 days"
+      },
+      "support": {
+        "title": "SUPPORT",
+        "heading": "Ongoing Care & Maintenance",
+        "description": "We provide continuous support to keep everything running smoothly. Regular updates, security monitoring, and technical assistance whenever you need it.",
+        "duration": "Ongoing"
+      }
+    }
+  },
+  "services": {
+    "title": "What We Can Do For You",
+    "subtitle": "Complete digital services to help your business thrive in today's online world",
+    "items": {
+      "web_development": {
+        "title": "Professional Website Development",
+        "description": "Beautiful, fast-loading websites that work perfectly on all devices. We build modern websites that help your business grow online with reliable hosting and ongoing support.",
+        "tech": ["Modern Design", "Mobile-Friendly", "Fast Loading", "Secure"],
+        "metrics": "Super Fast"
+      },
+      "custom_software": {
+        "title": "Custom Business Software",
+        "description": "Tailored software solutions designed specifically for your business needs. From inventory management to customer systems, we create tools that make your work easier and more efficient.",
+        "tech": ["Custom Built", "User-Friendly", "Reliable", "Scalable"],
+        "metrics": "Always Online"
+      },
+      "mobile_apps": {
+        "title": "Mobile Apps & Online Stores",
+        "description": "Mobile apps and e-commerce websites that your customers will love. Easy to use, secure payment processing, and works seamlessly across all devices and platforms.",
+        "tech": ["iOS & Android", "E-commerce", "Secure Payments", "Easy to Use"],
+        "metrics": "Loved by Users"
+      },
+      "digital_marketing": {
+        "title": "Digital Marketing & SEO",
+        "description": "Get found online and grow your business with our digital marketing services. We help improve your website's visibility on Google and create effective social media campaigns.",
+        "tech": ["Google SEO", "Social Media", "Online Ads", "Analytics"],
+        "metrics": "More Customers"
+      },
+      "performance": {
+        "title": "Website Speed & Performance",
+        "description": "Make your website lightning fast and improve customer experience. Faster websites rank better on Google, keep visitors happy, and convert more customers.",
+        "tech": ["Speed Boost", "Better Rankings", "Happy Visitors", "More Sales"],
+        "metrics": "Lightning Fast"
+      },
+      "integration": {
+        "title": "System Integration & Support",
+        "description": "Connect your different business systems together and get ongoing technical support. We help your tools work together smoothly and provide reliable maintenance.",
+        "tech": ["System Connect", "Data Sync", "24/7 Support", "Regular Updates"],
+        "metrics": "Always Supported"
+      }
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error occurred",
+    "success": "Success",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "close": "Close",
+    "next": "Next",
+    "previous": "Previous",
+    "learn_more": "Learn More"
+  }
+}

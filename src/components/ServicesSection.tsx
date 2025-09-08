@@ -66,7 +66,7 @@ export default function ServicesSection() {
             What We Can Do For You
           </h2>
           <p className="text-lg md:text-xl text-secondary-600 max-w-3xl mx-auto">
-            Complete digital services to help your business thrive in today's online world
+            Complete digital services to help your business thrive in today&apos;s online world
           </p>
         </motion.div>
 
