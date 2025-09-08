@@ -149,7 +149,7 @@ export default function HeroSection() {
           >
             <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-6 border border-white/20">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium">Professional Digital Solutions</span>
+              <span className="text-sm font-medium">Digital Excellence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 leading-tight">
@@ -170,18 +170,30 @@ export default function HeroSection() {
               Creating beautiful websites, mobile apps, and digital marketing solutions that help Thai businesses grow and succeed online
             </p>
             
-            {/* Tech Highlights */}
+            {/* Social Media Links */}
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              {['Website Development', 'Mobile Apps', 'Digital Marketing', 'SEO Services'].map((tech, index) => (
-                <motion.div
-                  key={tech}
+              {[
+                { name: 'Instagram', icon: '📷', url: 'https://instagram.com/siamsquad' },
+                { name: 'X (Twitter)', icon: '🐦', url: 'https://x.com/siamsquad' },
+                { name: 'LinkedIn', icon: '💼', url: 'https://linkedin.com/company/siamsquad' },
+                { name: 'Facebook', icon: '📘', url: 'https://facebook.com/siamsquad' }
+              ].map((social, index) => (
+                <motion.a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/20"
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/20 hover:bg-white/20 transition-all duration-300"
                 >
-                  <span className="text-sm font-medium">{tech}</span>
-                </motion.div>
+                  <span className="text-sm font-medium flex items-center gap-2">
+                    <span className="text-base">{social.icon}</span>
+                    {social.name}
+                  </span>
+                </motion.a>
               ))}
             </div>
           </motion.div>

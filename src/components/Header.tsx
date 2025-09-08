@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 // import { useTranslations } from 'next-intl'
-// import LanguageSwitcher from './LanguageSwitcher'
+import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -71,12 +71,12 @@ export default function Header() {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full" />
               </motion.button>
             ))}
-            {/* <LanguageSwitcher /> */}
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile Menu Button & Language Switcher */}
           <div className="md:hidden flex items-center gap-3">
-            {/* <LanguageSwitcher /> */}
+            <LanguageSwitcher />
             <button
               className="text-white p-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
