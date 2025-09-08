@@ -3,20 +3,20 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { useTranslations } from 'next-intl'
-import LanguageSwitcher from './LanguageSwitcher'
+// import { useTranslations } from 'next-intl'
+// import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const t = useTranslations('navigation')
+  // const t = useTranslations('navigation')
 
   const navigation = [
-    { name: t('home'), href: '#home' },
-    { name: t('process'), href: '#process' },
-    { name: t('services'), href: '#services' },
-    { name: t('portfolio'), href: '#portfolio' },
-    { name: t('contact'), href: '#contact' },
+    { name: 'Home', href: '#home' },
+    { name: 'Process', href: '#process' },
+    { name: 'Services', href: '#services' },
+    { name: 'Portfolio', href: '#portfolio' },
+    { name: 'Contact', href: '#contact' },
   ]
 
   useEffect(() => {
@@ -71,12 +71,12 @@ export default function Header() {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full" />
               </motion.button>
             ))}
-            <LanguageSwitcher />
+            {/* <LanguageSwitcher /> */}
           </div>
 
           {/* Mobile Menu Button & Language Switcher */}
           <div className="md:hidden flex items-center gap-3">
-            <LanguageSwitcher />
+            {/* <LanguageSwitcher /> */}
             <button
               className="text-white p-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

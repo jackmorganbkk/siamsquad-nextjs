@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { ChevronDownIcon, CodeBracketIcon, CpuChipIcon, CloudIcon } from '@heroicons/react/24/outline'
 import { useEffect, useState } from 'react'
-import { useTranslations } from 'next-intl'
+// import { useTranslations } from 'next-intl'
 
 const techStack = [
   'Modern Web', 'Mobile Apps', 'E-commerce', 'Cloud Solutions', 'Digital Marketing', 'SEO'
@@ -19,7 +19,7 @@ const codeSnippets = [
 export default function HeroSection() {
   const [currentTech, setCurrentTech] = useState(0)
   const [currentCode, setCurrentCode] = useState(0)
-  const t = useTranslations('hero')
+  // const t = useTranslations('hero')
 
   useEffect(() => {
     const techInterval = setInterval(() => {
@@ -149,12 +149,12 @@ export default function HeroSection() {
           >
             <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-6 border border-white/20">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium">{t('badge')}</span>
+              <span className="text-sm font-medium">Professional Digital Solutions</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 leading-tight">
               <span className="text-gradient bg-gradient-to-r from-blue-200 via-white to-blue-200 bg-clip-text text-transparent animate-gradient-shift">
-                {t('title')}
+                Professional Digital Solutions
               </span>
             </h1>
           </motion.div>
@@ -167,7 +167,7 @@ export default function HeroSection() {
             className="mb-12"
           >
             <p className="text-lg md:text-xl lg:text-2xl mb-6 max-w-4xl mx-auto text-white/90 leading-relaxed">
-              {t('subtitle')}
+              Creating beautiful websites, mobile apps, and digital marketing solutions that help Thai businesses grow and succeed online
             </p>
             
             {/* Tech Highlights */}
@@ -201,7 +201,7 @@ export default function HeroSection() {
             >
               <span className="relative z-10 flex items-center gap-2">
                 <CpuChipIcon className="w-5 h-5" />
-                {t('cta_quote')}
+                Get Free Quote
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-primary-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </motion.button>
@@ -214,7 +214,7 @@ export default function HeroSection() {
             >
               <span className="relative z-10 flex items-center gap-2">
                 <CodeBracketIcon className="w-5 h-5" />
-                {t('cta_portfolio')}
+                View Portfolio
               </span>
               <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
             </motion.button>
@@ -228,10 +228,10 @@ export default function HeroSection() {
             className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto"
           >
             {[
-              { number: '200+', label: t('stats.projects') },
-              { number: '99%', label: t('stats.uptime') },
-              { number: '24/7', label: t('stats.support') },
-              { number: '7+', label: t('stats.years') },
+              { number: '200+', label: 'Projects' },
+              { number: '99%', label: 'Uptime' },
+              { number: '24/7', label: 'Support' },
+              { number: '7+', label: 'Years' },
             ].map((stat, index) => (
               <div key={stat.label} className="text-center">
                 <div className="text-2xl md:text-3xl font-bold text-primary-300 mb-1">
@@ -253,7 +253,7 @@ export default function HeroSection() {
       >
         <div className="flex flex-col items-center">
           <div className="text-white/70 text-xs mb-2 group-hover:text-white transition-colors">
-            {t('scroll_text')}
+            Explore Solutions
           </div>
           <ChevronDownIcon className="w-6 h-6 text-white/70 group-hover:text-white transition-colors" />
         </div>
