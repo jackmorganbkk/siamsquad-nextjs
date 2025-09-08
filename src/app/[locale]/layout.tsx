@@ -2,6 +2,9 @@ import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
+
+export const dynamic = 'force-static';
+
 import { Inter, Poppins } from 'next/font/google';
 import '../globals.css';
 import Analytics from '@/components/Analytics';

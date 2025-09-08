@@ -4,44 +4,24 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
  
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Enable static export for Cloudflare Pages
+  output: 'export',
+  trailingSlash: true,
+  
   // Enable experimental features for better performance
   experimental: {
-    optimizePackageImports: ['framer-motion', 'lucide-react', '@heroicons/react']
+    optimizePackageImports: ['framer-motion', 'lucide-react', '@heroicons/react'],
+    missingSuspenseWithCSRBailout: false,
   },
   
-  // Image optimization
+  
+  // Disable image optimization for static export
   images: {
-    domains: ['images.unsplash.com'],
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+    unoptimized: true
   },
   
   // Compression
-  compress: true,
-  
-  // Headers for security and performance
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY'
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff'
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin'
-          }
-        ]
-      }
-    ];
-  }
+  compress: true
 };
 
 export default withNextIntl(nextConfig);

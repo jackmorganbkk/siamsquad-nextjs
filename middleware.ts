@@ -5,5 +5,7 @@ export default createMiddleware(routing);
  
 export const config = {
   // Match only internationalized pathnames
-  matcher: ['/', '/(th|en|ja)/:path*']
+  matcher: ['/', '/(th|en|ja)/:path*'],
+  // Skip middleware during static export
+  runtime: 'nodejs'
 };

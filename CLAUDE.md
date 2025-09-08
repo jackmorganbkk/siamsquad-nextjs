@@ -18,9 +18,12 @@ This is a Next.js 14 single-page marketing application for SiamSquad, a professi
 
 ### Technical Features:
 - **Modern stack**: Next.js 14 with TypeScript, React 18, and Tailwind CSS
+- **Internationalization**: Multi-language support (Thai, English, Japanese) using next-intl
+- **Static export**: Optimized for Cloudflare Pages and static hosting platforms
 - **Animation-rich**: Framer Motion for professional animations and micro-interactions
 - **Form handling**: React Hook Form with validation for quotation requests
-- **Performance optimized**: < 2s load times, 90+ Lighthouse scores
+- **Performance optimized**: < 2s load times, 90+ Lighthouse scores, built-in performance monitoring
+- **Accessibility enhanced**: Built-in accessibility improvements and monitoring
 - **Customer-friendly content**: Technical credibility through visual design, approachable language for non-technical clients
 
 ## Development Commands
@@ -30,6 +33,9 @@ npm run dev
 
 # Build for production
 npm run build
+
+# Export static build (for Cloudflare Pages/static hosting)
+npm run export
 
 # Start production server
 npm start
@@ -70,9 +76,10 @@ npm run lint
 ```
 src/
 ├── app/
-│   ├── globals.css        # Global styles with Tailwind imports
-│   ├── layout.tsx         # Root layout with metadata and fonts
-│   └── page.tsx           # Main page orchestrating all sections
+│   ├── [locale]/          # Internationalized routes
+│   │   ├── layout.tsx     # Locale-specific layout with metadata
+│   │   └── page.tsx       # Main page orchestrating all sections
+│   └── globals.css        # Global styles with Tailwind imports
 ├── components/
 │   ├── Header.tsx         # Navigation with smooth scrolling
 │   ├── HeroSection.tsx    # Hero with animated technical elements
@@ -83,7 +90,13 @@ src/
 │   ├── QuotationSection.tsx # Contact form with validation
 │   ├── ContactSection.tsx # Business contact information
 │   ├── Footer.tsx         # Footer with links and info
-│   └── LoadingOverlay.tsx # Professional loading animation
+│   ├── LoadingOverlay.tsx # Professional loading animation
+│   ├── Analytics.tsx      # Google Analytics integration
+│   ├── PerformanceOptimizer.tsx # Performance monitoring
+│   └── AccessibilityEnhancer.tsx # Accessibility improvements
+├── i18n/
+│   ├── routing.ts         # Internationalization routing config
+│   └── request.ts         # i18n request configuration
 ├── lib/                   # Utility functions (if any)
 └── public/               # Static assets
 ```
@@ -236,12 +249,42 @@ const onSubmit = (data: FormData) => {
 - **Bundle analysis**: Regular checks for unnecessary dependencies
 - **Caching strategies**: Proper cache headers and static generation
 
+## Internationalization Architecture
+
+### Language Support:
+- **Primary**: Thai (`th`) - Default locale for Thai market
+- **Secondary**: English (`en`) - International business communication
+- **Tertiary**: Japanese (`ja`) - Japanese market expansion
+
+### Routing Configuration:
+- **Locale prefix**: Always included in URLs (`/th/`, `/en/`, `/ja/`)
+- **Localized pathnames**: Custom paths for each language (e.g., `/th/บริการ`, `/en/services`, `/ja/サービス`)
+- **Static generation**: Locale detection disabled for static export compatibility
+- **SEO optimization**: Proper hreflang and canonical URLs for each locale
+
+### Implementation Patterns:
+```typescript
+// Using translations in components
+import { useTranslations } from 'next-intl';
+
+export default function Component() {
+  const t = useTranslations('ComponentNamespace');
+  return <h1>{t('title')}</h1>;
+}
+
+// Generating static params for all locales
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({locale}));
+}
+```
+
 ## TypeScript Configuration
 - **Strict mode**: Enabled with proper type checking
 - **Path aliases**: `@/*` maps to `./src/*`
 - **Component props**: Always define proper interfaces
 - **Form types**: Strict typing for form data and validation
 - **Animation types**: Proper typing for Framer Motion variants
+- **Locale types**: Strict typing for supported locales and pathnames
 
 ## Troubleshooting Common Issues
 
@@ -291,20 +334,31 @@ const onSubmit = (data: FormData) => {
 
 ## Deployment and Maintenance
 
+### Static Export Configuration:
+- **Target**: Cloudflare Pages optimized static export
+- **Image optimization**: Disabled for static compatibility
+- **Force static**: All pages generated at build time
+- **Compression**: Enabled for optimal file sizes
+- **Bundle optimization**: Optimized imports for key packages (Framer Motion, Lucide React, Heroicons)
+
 ### Production Checklist:
-- Performance audit with Lighthouse
+- Performance audit with Lighthouse (all locales)
 - Cross-browser testing (Chrome, Safari, Firefox, Edge)
 - Mobile device testing on actual devices
-- Form submission testing
+- Form submission testing (all languages)
 - Contact information accuracy
 - Analytics and tracking implementation
+- i18n functionality testing (locale switching, localized routes)
+- Accessibility compliance testing
 
 ### Regular Maintenance:
 - Dependency updates (monthly)
-- Performance monitoring
-- Content freshness (portfolio updates)
+- Performance monitoring across all locales
+- Content freshness (portfolio updates in all languages)
 - Contact form functionality testing
-- SEO performance tracking
+- SEO performance tracking (multilingual)
+- Translation accuracy reviews
+- Accessibility audit updates
 
 ---
 

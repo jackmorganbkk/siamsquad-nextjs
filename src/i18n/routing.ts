@@ -3,12 +3,15 @@ import {defineRouting} from 'next-intl/routing';
 export const routing = defineRouting({
   // A list of all locales that are supported
   locales: ['th', 'en', 'ja'],
- 
+
   // Used when no locale matches
   defaultLocale: 'th',
   
   // Always use locale prefix to prevent 404 errors
   localePrefix: 'always',
+  
+  // Disable locale detection for static export
+  localeDetection: false,
   
   // Localized pathnames
   pathnames: {
