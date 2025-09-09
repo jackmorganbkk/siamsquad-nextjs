@@ -10,7 +10,6 @@ const nextConfig = {
   
   // Enable experimental features for better performance
   experimental: {
-    optimizePackageImports: ['framer-motion', 'lucide-react', '@heroicons/react'],
     missingSuspenseWithCSRBailout: false,
   },
   
