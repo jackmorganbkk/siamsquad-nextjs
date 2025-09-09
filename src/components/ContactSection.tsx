@@ -26,7 +26,7 @@ export default function ContactSection() {
             Get In Touch
           </h2>
           <p className="text-lg text-white/70 max-w-2xl mx-auto">
-            Ready to start your project? Let's discuss how we can help your business grow.
+            Ready to start your project? Let&apos;s discuss how we can help your business grow.
           </p>
         </motion.div>
 
