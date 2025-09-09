@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { ChevronDownIcon, CodeBracketIcon, CpuChipIcon, CloudIcon } from '@heroicons/react/24/outline'
 import { useEffect, useState } from 'react'
-// import { useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl'
 
 const techStack = [
   'Modern Web', 'Mobile Apps', 'E-commerce', 'Cloud Solutions', 'Digital Marketing', 'SEO'
@@ -19,9 +19,12 @@ const codeSnippets = [
 export default function HeroSection() {
   const [currentTech, setCurrentTech] = useState(0)
   const [currentCode, setCurrentCode] = useState(0)
-  // const t = useTranslations('hero')
+  const [isClient, setIsClient] = useState(false)
+  const t = useTranslations('hero')
 
   useEffect(() => {
+    setIsClient(true)
+    
     const techInterval = setInterval(() => {
       setCurrentTech((prev) => (prev + 1) % techStack.length)
     }, 2000)
@@ -44,37 +47,39 @@ export default function HeroSection() {
   }
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-hero-gradient">
-      {/* Animated Grid Background */}
-      <div className="absolute inset-0 opacity-10">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-bg-primary pt-16 sm:pt-20 md:pt-24 pb-16" suppressHydrationWarning>
+      {/* Animated mesh background */}
+      <div className="absolute inset-0 bg-mesh-gradient opacity-20"></div>
+      {/* Modern Grid Background */}
+      <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0" style={{
           backgroundImage: `
-            linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)
+            linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px)
           `,
-          backgroundSize: '50px 50px'
+          backgroundSize: '60px 60px'
         }} />
       </div>
 
       {/* Floating Tech Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Code Blocks */}
+        {/* Code Blocks - Hidden on mobile to prevent overlap */}
         <motion.div
-          className="absolute top-20 left-10 bg-black/20 backdrop-blur-sm rounded-lg p-4 border border-primary-400/30"
+          className="absolute top-20 left-10 dark-card rounded-lg p-4 border border-neon-blue/30 hidden lg:block"
           animate={{
             y: [0, -15, 0],
             opacity: [0.7, 1, 0.7],
           }}
           transition={{ duration: 4, repeat: Infinity }}
         >
-          <div className="text-green-300 font-mono text-sm">
-            {codeSnippets[currentCode]}
+          <div className="text-neon-green font-mono text-sm">
+            {isClient ? codeSnippets[currentCode] : codeSnippets[0]}
           </div>
         </motion.div>
 
-        {/* Tech Stack Indicator */}
+        {/* Tech Stack Indicator - Hidden on mobile to prevent overlap */}
         <motion.div
-          className="absolute top-40 right-20 bg-black/20 backdrop-blur-sm rounded-lg p-4 border border-primary-400/30"
+          className="absolute top-40 right-20 dark-card rounded-lg p-4 border border-neon-purple/30 hidden lg:block"
           animate={{
             y: [0, -10, 0],
             scale: [1, 1.05, 1],
@@ -82,16 +87,16 @@ export default function HeroSection() {
           transition={{ duration: 3, repeat: Infinity, delay: 1 }}
         >
           <div className="flex items-center gap-2">
-            <CpuChipIcon className="w-5 h-5 text-primary-300" />
+            <CpuChipIcon className="w-5 h-5 text-neon-blue" />
             <span className="text-white font-mono text-sm">
-              {techStack[currentTech]}
+              {isClient ? techStack[currentTech] : techStack[0]}
             </span>
           </div>
         </motion.div>
 
-        {/* Floating Icons */}
+        {/* Floating Icons - Hidden on mobile to prevent overlap */}
         <motion.div
-          className="absolute bottom-40 left-20 text-primary-300"
+          className="absolute bottom-40 left-20 text-neon-blue neon-glow hidden lg:block"
           animate={{
             rotate: [0, 360],
             scale: [1, 1.2, 1],
@@ -102,7 +107,7 @@ export default function HeroSection() {
         </motion.div>
 
         <motion.div
-          className="absolute top-32 right-32 text-primary-300"
+          className="absolute top-32 right-32 text-neon-purple hidden lg:block"
           animate={{
             y: [0, -20, 0],
             rotate: [0, -180, 0],
@@ -117,7 +122,7 @@ export default function HeroSection() {
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute text-primary-400/20 font-mono text-xs"
+              className="absolute text-neon-blue/30 font-mono text-xs"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: '-10px',
@@ -147,14 +152,10 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-8"
           >
-            <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-6 border border-white/20">
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium">Digital Excellence</span>
-            </div>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 leading-tight">
-              <span className="text-gradient bg-gradient-to-r from-blue-200 via-white to-blue-200 bg-clip-text text-transparent animate-gradient-shift">
-                Professional Digital Solutions
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold mb-6 leading-tight">
+              <span className="gradient-text neon-text">
+                {t('title')}
               </span>
             </h1>
           </motion.div>
@@ -166,36 +167,9 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mb-12"
           >
-            <p className="text-lg md:text-xl lg:text-2xl mb-6 max-w-4xl mx-auto text-white/90 leading-relaxed">
-              Creating beautiful websites, mobile apps, and digital marketing solutions that help Thai businesses grow and succeed online
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 max-w-4xl mx-auto text-white/80 leading-relaxed px-4">
+              {t('subtitle')}
             </p>
-            
-            {/* Social Media Links */}
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              {[
-                { name: 'Instagram', icon: '📷', url: 'https://instagram.com/siamsquad' },
-                { name: 'X (Twitter)', icon: '🐦', url: 'https://x.com/siamsquad' },
-                { name: 'LinkedIn', icon: '💼', url: 'https://linkedin.com/company/siamsquad' },
-                { name: 'Facebook', icon: '📘', url: 'https://facebook.com/siamsquad' }
-              ].map((social, index) => (
-                <motion.a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/20 hover:bg-white/20 transition-all duration-300"
-                >
-                  <span className="text-sm font-medium flex items-center gap-2">
-                    <span className="text-base">{social.icon}</span>
-                    {social.name}
-                  </span>
-                </motion.a>
-              ))}
-            </div>
           </motion.div>
 
           {/* Enhanced CTA Buttons */}
@@ -203,32 +177,32 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12"
+            className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 px-4"
           >
             <motion.button
               onClick={() => scrollToSection('#quotation')}
-              className="group relative bg-gradient-to-r from-primary-500 to-primary-600 text-white font-semibold px-10 py-4 rounded-lg shadow-lg overflow-hidden"
+              className="group relative bg-neon-gradient text-white font-semibold px-6 sm:px-10 py-3 sm:py-4 rounded-lg neon-glow overflow-hidden w-full sm:w-auto"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <span className="relative z-10 flex items-center gap-2">
                 <CpuChipIcon className="w-5 h-5" />
-                Get Free Quote
+                {t('cta_quote')}
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-primary-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-neon-blue/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </motion.button>
             
             <motion.button
               onClick={() => scrollToSection('#portfolio')}
-              className="group relative border-2 border-white text-white font-semibold px-10 py-4 rounded-lg overflow-hidden"
+              className="group relative border-2 border-neon-blue text-neon-blue font-semibold px-6 sm:px-10 py-3 sm:py-4 rounded-lg overflow-hidden hover:bg-neon-blue/10 w-full sm:w-auto"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <span className="relative z-10 flex items-center gap-2">
                 <CodeBracketIcon className="w-5 h-5" />
-                View Portfolio
+                {t('cta_portfolio')}
               </span>
-              <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-neon-blue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </motion.button>
           </motion.div>
 
@@ -237,39 +211,41 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto"
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-2xl mx-auto px-4"
           >
             {[
-              { number: '200+', label: 'Projects' },
-              { number: '99%', label: 'Uptime' },
-              { number: '24/7', label: 'Support' },
-              { number: '7+', label: 'Years' },
+              { number: '200+', label: t('stats.projects') },
+              { number: '99%', label: t('stats.uptime') },
+              { number: '24/7', label: t('stats.support') },
+              { number: '7+', label: t('stats.years') },
             ].map((stat, index) => (
               <div key={stat.label} className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-primary-300 mb-1">
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-neon-blue mb-1 neon-text">
                   {stat.number}
                 </div>
-                <div className="text-sm text-white/70">{stat.label}</div>
+                <div className="text-xs sm:text-sm text-white/70">{stat.label}</div>
               </div>
             ))}
           </motion.div>
         </div>
       </div>
 
-      {/* Enhanced Scroll Indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer group"
-        animate={{ y: [0, -10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-        onClick={() => scrollToSection('#process')}
-      >
-        <div className="flex flex-col items-center">
-          <div className="text-white/70 text-xs mb-2 group-hover:text-white transition-colors">
-            Explore Solutions
+      {/* Enhanced Scroll Indicator - Perfectly Centered */}
+      <div className="absolute bottom-4 sm:bottom-8 left-0 right-0 flex justify-center z-20">
+        <motion.div
+          className="cursor-pointer group px-4 py-2 rounded-lg bg-black/20 backdrop-blur-sm border border-white/10 hover:bg-black/30 transition-all duration-300"
+          animate={{ y: [0, -10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          onClick={() => scrollToSection('#process')}
+        >
+          <div className="flex flex-col items-center">
+            <div className="text-white/70 text-xs sm:text-sm mb-2 group-hover:text-white transition-colors text-center whitespace-nowrap font-medium">
+              {t('scroll_text')}
+            </div>
+            <ChevronDownIcon className="w-5 h-5 sm:w-6 sm:h-6 text-white/70 group-hover:text-white transition-colors mx-auto" />
           </div>
-          <ChevronDownIcon className="w-6 h-6 text-white/70 group-hover:text-white transition-colors" />
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </section>
   )
 }

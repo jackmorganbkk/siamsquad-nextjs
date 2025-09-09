@@ -2,10 +2,10 @@ import {defineRouting} from 'next-intl/routing';
  
 export const routing = defineRouting({
   // A list of all locales that are supported
-  locales: ['th', 'en', 'ja'],
+  locales: ['en', 'th', 'ja', 'zh'],
 
   // Used when no locale matches
-  defaultLocale: 'th',
+  defaultLocale: 'en',
   
   // Always use locale prefix to prevent 404 errors
   localePrefix: 'always',
@@ -19,17 +19,20 @@ export const routing = defineRouting({
     '/services': {
       th: '/บริการ',
       en: '/services',
-      ja: '/サービス'
+      ja: '/サービス',
+      zh: '/服务'
     },
     '/contact': {
       th: '/ติดต่อ',
       en: '/contact', 
-      ja: '/お問い合わせ'
+      ja: '/お問い合わせ',
+      zh: '/联系我们'
     },
     '/portfolio': {
       th: '/ผลงาน',
       en: '/portfolio',
-      ja: '/ポートフォリオ'
+      ja: '/ポートフォリオ',
+      zh: '/作品集'
     }
   }
 });

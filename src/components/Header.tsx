@@ -3,20 +3,20 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-// import { useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl'
 import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  // const t = useTranslations('navigation')
+  const t = useTranslations('navigation')
 
   const navigation = [
-    { name: 'Home', href: '#home' },
-    { name: 'Process', href: '#process' },
-    { name: 'Services', href: '#services' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Contact', href: '#contact' },
+    { name: t('home'), href: '#home' },
+    { name: t('process'), href: '#process' },
+    { name: t('services'), href: '#services' },
+    { name: t('portfolio'), href: '#portfolio' },
+    { name: t('contact'), href: '#contact' },
   ]
 
   useEffect(() => {
@@ -43,8 +43,8 @@ export default function Header() {
       transition={{ duration: 0.6 }}
       className={`fixed w-full top-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'backdrop-blur-glass shadow-lg' 
-          : 'bg-hero-gradient'
+          ? 'dark-card shadow-lg' 
+          : 'bg-bg-primary/80 backdrop-blur-sm'
       }`}
     >
       <div className="container-custom">
@@ -52,7 +52,7 @@ export default function Header() {
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="text-2xl font-heading font-bold text-white glow-text cursor-pointer"
+            className="text-2xl font-heading font-bold gradient-text neon-text cursor-pointer"
             onClick={() => scrollToSection('#home')}
           >
             SiamSquad
@@ -64,11 +64,11 @@ export default function Header() {
               <motion.button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-white/90 hover:text-white font-medium transition-all duration-300 relative group"
+                className="text-white/80 hover:text-neon-blue font-medium transition-all duration-300 relative group"
                 whileHover={{ y: -2 }}
               >
                 {item.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full" />
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-neon-blue transition-all duration-300 group-hover:w-full" />
               </motion.button>
             ))}
             <LanguageSwitcher />
@@ -96,14 +96,14 @@ export default function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white/10 backdrop-blur-md rounded-lg mb-4"
+            className="md:hidden dark-card rounded-lg mb-4"
           >
             <div className="py-4 space-y-2">
               {navigation.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left px-4 py-2 text-white hover:bg-white/10 rounded transition-colors duration-200"
+                  className="block w-full text-left px-4 py-2 text-white hover:bg-neon-blue/10 hover:text-neon-blue rounded transition-colors duration-200"
                 >
                   {item.name}
                 </button>

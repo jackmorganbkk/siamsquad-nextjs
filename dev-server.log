@@ -1,0 +1,992 @@
+
+> siamsquad-nextjs@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.32
+  - Local:        http://localhost:3000
+  - Experiments (use with caution):
+    · missingSuspenseWithCSRBailout
+
+ ✓ Starting...
+ ✓ Ready in 1885ms
+ ○ Compiling / ...
+ ✓ Compiled / in 3.1s (1139 modules)
+ HEAD / 200 in 3295ms
+ ✓ Compiled in 287ms (569 modules)
+ GET / 200 in 62ms
+ GET / 200 in 45ms
+ ✓ Compiled in 434ms (1121 modules)
+ GET / 200 in 108ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 349ms (1015 modules)
+ GET / 200 in 80ms
+ ○ Compiling /[locale] ...
+ ✓ Compiled /[locale] in 647ms (1217 modules)
+ HEAD / 200 in 101ms
+ HEAD /th/ 200 in 86ms
+ GET /th/ 200 in 49ms
+ ✓ Compiled in 493ms (1212 modules)
+ GET /th/ 200 in 93ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 622ms (1201 modules)
+ GET /en/en/ 404 in 58ms
+ ✓ Compiled in 469ms (1215 modules)
+ GET /en/en/ 404 in 35ms
+ ✓ Compiled in 646ms (1215 modules)
+ GET /en/en/ 404 in 28ms
+ GET /en/en/ 404 in 24ms
+ ✓ Compiled in 415ms (1215 modules)
+ GET /en/en/ 404 in 28ms
+ ✓ Compiled in 610ms (1215 modules)
+ GET /en/en/ 404 in 23ms
+ ✓ Compiled in 385ms (1215 modules)
+ GET /en/en/ 404 in 30ms
+ ✓ Compiled in 613ms (1215 modules)
+ GET /en/en/ 404 in 18ms
+ ✓ Compiled in 313ms (1215 modules)
+ GET /en/en/ 404 in 104ms
+ ✓ Compiled in 295ms (1215 modules)
+ GET /en/en/ 404 in 24ms
+ ✓ Compiled in 301ms (1215 modules)
+ GET /en/en/ 404 in 28ms
+ ✓ Compiled in 328ms (1215 modules)
+ GET /en/en/ 404 in 55ms
+ HEAD /th/ 200 in 96ms
+ GET /en/en/ 404 in 25ms
+ GET /en/en/ 404 in 15ms
+ GET /en/en/ 404 in 17ms
+ GET /en/en/ 404 in 16ms
+ GET /en/en/ 404 in 16ms
+ GET /en/en/ 404 in 17ms
+ ✓ Compiled in 364ms (1201 modules)
+ GET /en/en/ 404 in 367ms
+ GET /en/en/ 404 in 69ms
+ GET /en/en/ 404 in 20ms
+ GET /en/en/ 404 in 13ms
+ GET /en/en/ 404 in 30ms
+ GET /en/en/ 404 in 19ms
+ GET /en/en/ 404 in 22ms
+ GET /en/en/ 404 in 13ms
+ GET /en/en/ 404 in 11ms
+ GET /en/en/ 404 in 18ms
+ GET /en/en/ 404 in 36ms
+ GET /en/en/ 404 in 26ms
+ HEAD / 200 in 49ms
+ HEAD /th/ 200 in 82ms
+ HEAD /en/ 200 in 15ms
+ HEAD /ja/ 200 in 26ms
+ ✓ Compiled in 780ms (1215 modules)
+ GET /en/en/ 404 in 81ms
+ GET / 200 in 22ms
+ GET /en/ 200 in 54ms
+ GET /en/en/ 404 in 48ms
+ GET /en/en/ 404 in 14ms
+ GET /en/en/ 404 in 24ms
+ GET /en/en/ 404 in 12ms
+ GET /th/ 200 in 38ms
+ GET /en/en/ 404 in 44ms
+ GET /ja/ 200 in 25ms
+ GET /en/en/ 404 in 82ms
+ HEAD /en/en/ 404 in 12ms
+ GET /en/en/ 404 in 41ms
+ GET /en/en/ 404 in 18ms
+ GET /en/en/ 404 in 12ms
+ GET /en/en/ 404 in 14ms
+ GET /en/en/ 404 in 11ms
+ GET /en/en/ 404 in 15ms
+ GET /en/en/ 404 in 16ms
+ GET /en/en/ 404 in 32ms
+ GET /en/en/ 404 in 18ms
+ GET /en/en/ 404 in 14ms
+ ✓ Compiled in 299ms (1215 modules)
+ GET /en/en/ 404 in 52ms
+ GET / 200 in 81ms
+ ⨯ Error: Route /th/ with `dynamic = "error"` couldn't be rendered statically because it used `headers`. See more info here: https://nextjs.org/docs/app/building-your-application/rendering/static-and-dynamic#dynamic-rendering
+    at eval (./src/i18n/request.ts:9:136)
+    at Module.generateMetadata (./src/app/[locale]/layout.tsx:40:88)
+digest: "2113588663"
+ GET /th/ 200 in 332ms
+ ✓ Compiled in 1949ms (1212 modules)
+ GET /th/ 200 in 243ms
+ ✓ Compiled in 778ms (1212 modules)
+ ✓ Compiled in 1980ms (1212 modules)
+ ✓ Compiled in 474ms (1212 modules)
+ ✓ Compiled in 868ms (1212 modules)
+ ⨯ ./src/components/AccessibilityEnhancer.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4m/Users/projectdiscovery/bkk/siamsquad-nextjs/src/components/AccessibilityEnhancer.tsx[0m:92:1]
+ [2m92[0m |   };
+ [2m93[0m | 
+ [2m94[0m |   return (
+ [2m95[0m |     <div suppressHydrationWarning>
+    : [31;1m     ^^^[0m
+ [2m96[0m |       {/* Skip to main content link */}
+ [2m97[0m |       <button
+ [2m98[0m |         onClick={skipToMain}
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/components/AccessibilityEnhancer.tsx
+./src/app/layout.tsx
+ ○ Compiling /_not-found ...
+ ⨯ ./src/components/AccessibilityEnhancer.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4m/Users/projectdiscovery/bkk/siamsquad-nextjs/src/components/AccessibilityEnhancer.tsx[0m:92:1]
+ [2m92[0m |   };
+ [2m93[0m | 
+ [2m94[0m |   return (
+ [2m95[0m |     <div suppressHydrationWarning>
+    : [31;1m     ^^^[0m
+ [2m96[0m |       {/* Skip to main content link */}
+ [2m97[0m |       <button
+ [2m98[0m |         onClick={skipToMain}
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/components/AccessibilityEnhancer.tsx
+./src/app/layout.tsx
+ GET /_next/static/webpack/44e7843fe80c797e.webpack.hot-update.json 500 in 1512ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /th/ 500 in 21ms
+ ✓ Compiled /_error in 550ms (1442 modules)
+ ✓ Compiled (1428 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /th/ 200 in 157ms
+ GET /_next/static/webpack/f30f83aa2d3b4981.webpack.hot-update.json 404 in 716ms
+ GET /th/ 200 in 67ms
+ ✓ Compiled in 324ms (1442 modules)
+ ✓ Compiled in 431ms (1437 modules)
+ GET /th/ 200 in 217ms
+ GET /en/ 200 in 87ms
+ GET /en/ 200 in 76ms
+ ✓ Compiled in 675ms (1437 modules)
+ GET /th/ 200 in 87ms
+ GET /th/ 200 in 105ms
+ ✓ Compiled /_not-found in 193ms (1426 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 293ms
+ GET /th/ 200 in 156ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 40ms
+ ✓ Compiled in 1347ms (1423 modules)
+ ✓ Compiled in 1095ms (1437 modules)
+ GET /th/ 200 in 327ms
+ ✓ Compiled /_not-found in 457ms (1426 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 628ms
+ GET /th/ 200 in 122ms
+ GET /th/ 200 in 297ms
+ HEAD /th/ 200 in 70ms
+ GET /th/ 200 in 83ms
+ ✓ Compiled in 641ms (1437 modules)
+ ✓ Compiled in 1243ms (1437 modules)
+ GET /th/ 200 in 165ms
+ HEAD /en/ 200 in 57ms
+ HEAD /ja/ 200 in 29ms
+ HEAD / 200 in 18ms
+ GET /th/ 200 in 175ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 888ms (1426 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 1179ms
+ ✓ Compiled in 614ms (1437 modules)
+ ✓ Compiled in 424ms (1437 modules)
+ ✓ Compiled in 345ms (1437 modules)
+ ✓ Compiled in 234ms (1437 modules)
+ ✓ Compiled in 252ms (1437 modules)
+ ✓ Compiled in 292ms (1437 modules)
+ ✓ Compiled in 349ms (1437 modules)
+ ✓ Compiled in 351ms (1437 modules)
+ ✓ Compiled in 271ms (1437 modules)
+ ✓ Compiled in 284ms (1437 modules)
+ ✓ Compiled in 500ms (1437 modules)
+ ✓ Compiled in 306ms (1423 modules)
+ ✓ Compiled in 428ms (1437 modules)
+ ✓ Compiled in 318ms (1437 modules)
+ ✓ Compiled in 737ms (674 modules)
+ ✓ Compiled in 67ms (674 modules)
+ ⨯ ./src/messages/vi.json
+Module parse failed: Cannot parse JSON: Unexpected end of JSON input while parsing empty string
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+Error: Cannot parse JSON: Unexpected end of JSON input while parsing empty string
+Import trace for requested module:
+./src/messages/vi.json
+./src/messages/ lazy ^\.\/.*\.json$ namespace object
+./src/i18n/request.ts
+./node_modules/next-intl/dist/esm/development/server/react-server/getConfig.js
+./node_modules/next-intl/dist/esm/development/server/react-server/getFormatter.js
+./node_modules/next-intl/dist/esm/development/server.react-server.js
+./src/app/[locale]/layout.tsx
+ ✓ Compiled in 116ms (675 modules)
+ ✓ Compiled in 159ms (676 modules)
+ ✓ Compiled in 96ms (676 modules)
+ ✓ Compiled in 260ms (677 modules)
+ ✓ Compiled in 54ms (677 modules)
+ ✓ Compiled in 438ms (764 modules)
+ ✓ Compiled in 336ms (764 modules)
+ GET /en/ 200 in 141ms
+ ✓ Compiled in 300ms (1441 modules)
+ ✓ Compiled in 654ms (1441 modules)
+ GET /en/ 200 in 104ms
+ ✓ Compiled in 333ms (1441 modules)
+ ✓ Compiled in 893ms (1441 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ⨯ Internal error: Error: Could not find the module "/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next-intl/dist/esm/production/shared/NextIntlClientProvider.js#default" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at eb (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:136577)
+    at ek (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:138152)
+    at Array.toJSON (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:135629)
+    at stringify (<anonymous>)
+    at eP (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:142093)
+    at eE (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:142572)
+    at Timeout._onTimeout (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:135349)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7)
+digest: "1790359717"
+ ✓ Compiled /_not-found in 119ms (1430 modules)
+ ⨯ Failed to generate static paths for /[locale]:
+Error: Cannot find module './vendor-chunks/next.js'
+Require stack:
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/app/[locale]/page.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1383:15)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:55:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+    at Function._load (node:internal/modules/cjs/loader:1192:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1463:12)
+    at mod.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:147:16) {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/app/[locale]/page.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/static-paths-worker.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/compiled/jest-worker/processChild.js'
+  ]
+}
+ GET /_next/static/css/app/layout.css 404 in 195ms
+ ✓ Compiled in 363ms (1444 modules)
+ ⨯ Error: Cannot find module './vendor-chunks/next.js'
+Require stack:
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/app/[locale]/page.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1383:15)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:55:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+    at Function._load (node:internal/modules/cjs/loader:1192:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1463:12)
+    at mod.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:147:16) {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/app/[locale]/page.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/static-paths-worker.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/compiled/jest-worker/processChild.js'
+  ],
+  page: '/en'
+}
+ ✓ Compiled /_error in 196ms (1432 modules)
+ ⨯ Error: Cannot find module './682.js'
+Require stack:
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/pages/_document.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/hot-middleware.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/router-server.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/start-server.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1383:15)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:55:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+    at Function._load (node:internal/modules/cjs/loader:1192:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1463:12)
+    at mod.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:147:16)
+    at __webpack_require__.f.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js:198:28)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js:162:22)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/pages/_document.js:1:335
+    at Object.<anonymous> (/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/pages/_document.js:1:376)
+    at Module._compile (node:internal/modules/cjs/loader:1706:14)
+    at Object..js (node:internal/modules/cjs/loader:1839:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1463:12)
+    at mod.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:147:16)
+    at requirePage (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js:109:84)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js:72:65
+    at async Promise.all (index 0)
+    at async loadComponentsImpl (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js:71:33)
+    at async DevServer.findPageComponentsImpl (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/next-server.js:714:36) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/pages/_document.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/router-server.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+ GET /en/ 500 in 378ms
+ GET /_next/static/chunks/fallback/webpack.js 404 in 77ms
+ GET /_next/static/chunks/fallback/main.js 404 in 77ms
+ GET /_next/static/chunks/fallback/pages/_app.js 404 in 75ms
+ GET /_next/static/chunks/fallback/react-refresh.js 404 in 77ms
+ GET /_next/static/chunks/fallback/pages/_error.js 404 in 75ms
+ ⨯ Error: Cannot find module './vendor-chunks/next.js'
+Require stack:
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/app/[locale]/page.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1383:15)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:55:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+    at Function._load (node:internal/modules/cjs/loader:1192:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1463:12)
+    at mod.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:147:16) {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/app/[locale]/page.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/static-paths-worker.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/compiled/jest-worker/processChild.js'
+  ],
+  page: '/en'
+}
+ ⨯ Error: Cannot find module './682.js'
+Require stack:
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/pages/_document.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/hot-middleware.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/router-server.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/start-server.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1383:15)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:55:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+    at Function._load (node:internal/modules/cjs/loader:1192:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1463:12)
+    at mod.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:147:16)
+    at __webpack_require__.f.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js:198:28)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js:162:22)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/pages/_document.js:1:335
+    at Object.<anonymous> (/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/pages/_document.js:1:376)
+    at Module._compile (node:internal/modules/cjs/loader:1706:14)
+    at Object..js (node:internal/modules/cjs/loader:1839:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1463:12)
+    at mod.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:147:16)
+    at requirePage (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js:109:84)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js:72:65
+    at async Promise.all (index 0)
+    at async loadComponentsImpl (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js:71:33)
+    at async DevServer.findPageComponentsImpl (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/next-server.js:714:36) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/pages/_document.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/router-server.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+ GET /en/ 500 in 129ms
+ GET /_next/static/chunks/fallback/main.js 404 in 39ms
+ GET /_next/static/chunks/fallback/webpack.js 404 in 42ms
+ GET /_next/static/chunks/fallback/pages/_error.js 404 in 37ms
+ GET /_next/static/chunks/fallback/react-refresh.js 404 in 39ms
+ GET /_next/static/chunks/fallback/pages/_app.js 404 in 38ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 26ms
+ ⨯ Error: Cannot find module './vendor-chunks/next.js'
+Require stack:
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/app/[locale]/page.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1383:15)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:55:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+    at Function._load (node:internal/modules/cjs/loader:1192:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1463:12)
+    at mod.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:147:16) {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/app/[locale]/page.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/static-paths-worker.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/compiled/jest-worker/processChild.js'
+  ],
+  page: '/en'
+}
+ ⨯ Error: Cannot find module './682.js'
+Require stack:
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/pages/_document.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/hot-middleware.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/router-server.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/start-server.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1383:15)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:55:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+    at Function._load (node:internal/modules/cjs/loader:1192:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1463:12)
+    at mod.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:147:16)
+    at __webpack_require__.f.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js:198:28)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js:162:22)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/pages/_document.js:1:335
+    at Object.<anonymous> (/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/pages/_document.js:1:376)
+    at Module._compile (node:internal/modules/cjs/loader:1706:14)
+    at Object..js (node:internal/modules/cjs/loader:1839:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1463:12)
+    at mod.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:147:16)
+    at requirePage (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js:109:84)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js:72:65
+    at async Promise.all (index 0)
+    at async loadComponentsImpl (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js:71:33)
+    at async DevServer.findPageComponentsImpl (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/next-server.js:714:36) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/pages/_document.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/router-server.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+ GET /en/ 500 in 128ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 49ms
+ GET /_next/static/chunks/fallback/webpack.js 404 in 70ms
+ GET /_next/static/chunks/fallback/react-refresh.js 404 in 68ms
+ GET /_next/static/chunks/fallback/pages/_app.js 404 in 68ms
+ GET /_next/static/chunks/fallback/main.js 404 in 71ms
+ GET /_next/static/chunks/fallback/pages/_error.js 404 in 70ms
+ ⨯ Error: Cannot find module './vendor-chunks/next.js'
+Require stack:
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/app/[locale]/page.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1383:15)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:55:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+    at Function._load (node:internal/modules/cjs/loader:1192:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1463:12)
+    at mod.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:147:16) {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/app/[locale]/page.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/static-paths-worker.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/compiled/jest-worker/processChild.js'
+  ],
+  page: '/en'
+}
+ ⨯ Error: Cannot find module './682.js'
+Require stack:
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/pages/_document.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/hot-middleware.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/router-server.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/start-server.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1383:15)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:55:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+    at Function._load (node:internal/modules/cjs/loader:1192:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1463:12)
+    at mod.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:147:16)
+    at __webpack_require__.f.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js:198:28)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js:162:22)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/pages/_document.js:1:335
+    at Object.<anonymous> (/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/pages/_document.js:1:376)
+    at Module._compile (node:internal/modules/cjs/loader:1706:14)
+    at Object..js (node:internal/modules/cjs/loader:1839:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1463:12)
+    at mod.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:147:16)
+    at requirePage (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js:109:84)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js:72:65
+    at async Promise.all (index 0)
+    at async loadComponentsImpl (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js:71:33)
+    at async DevServer.findPageComponentsImpl (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/next-server.js:714:36) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/pages/_document.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/router-server.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+ GET /en/ 500 in 144ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 47ms
+ GET /_next/static/chunks/fallback/main.js 404 in 62ms
+ GET /_next/static/chunks/fallback/webpack.js 404 in 72ms
+ GET /_next/static/chunks/fallback/react-refresh.js 404 in 58ms
+ GET /_next/static/chunks/fallback/pages/_app.js 404 in 58ms
+ GET /_next/static/chunks/fallback/pages/_error.js 404 in 56ms
+ ⨯ Error: Cannot find module './vendor-chunks/next.js'
+Require stack:
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/app/[locale]/page.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1383:15)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:55:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+    at Function._load (node:internal/modules/cjs/loader:1192:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1463:12)
+    at mod.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:147:16) {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/app/[locale]/page.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/static-paths-worker.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/compiled/jest-worker/processChild.js'
+  ],
+  page: '/en'
+}
+ ⨯ Error: Cannot find module './682.js'
+Require stack:
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/pages/_document.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/hot-middleware.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/router-server.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/start-server.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1383:15)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:55:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+    at Function._load (node:internal/modules/cjs/loader:1192:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1463:12)
+    at mod.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:147:16)
+    at __webpack_require__.f.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js:198:28)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js:162:22)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/pages/_document.js:1:335
+    at Object.<anonymous> (/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/pages/_document.js:1:376)
+    at Module._compile (node:internal/modules/cjs/loader:1706:14)
+    at Object..js (node:internal/modules/cjs/loader:1839:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1463:12)
+    at mod.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:147:16)
+    at requirePage (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js:109:84)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js:72:65
+    at async Promise.all (index 0)
+    at async loadComponentsImpl (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js:71:33)
+    at async DevServer.findPageComponentsImpl (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/next-server.js:714:36) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/pages/_document.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/router-server.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+ GET /en/ 500 in 108ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 42ms
+ GET /_next/static/chunks/fallback/webpack.js 404 in 56ms
+ GET /_next/static/chunks/fallback/main.js 404 in 57ms
+ GET /_next/static/chunks/fallback/react-refresh.js 404 in 55ms
+ GET /_next/static/chunks/fallback/pages/_error.js 404 in 55ms
+ GET /_next/static/chunks/fallback/pages/_app.js 404 in 57ms
+ ⨯ Error: Cannot find module './vendor-chunks/next.js'
+Require stack:
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/app/[locale]/page.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1383:15)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:55:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+    at Function._load (node:internal/modules/cjs/loader:1192:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1463:12)
+    at mod.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:147:16) {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/app/[locale]/page.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/static-paths-worker.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/compiled/jest-worker/processChild.js'
+  ],
+  page: '/en'
+}
+ ⨯ Error: Cannot find module './682.js'
+Require stack:
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/pages/_document.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/hot-middleware.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/router-server.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/start-server.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1383:15)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:55:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+    at Function._load (node:internal/modules/cjs/loader:1192:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1463:12)
+    at mod.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:147:16)
+    at __webpack_require__.f.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js:198:28)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js:162:22)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/pages/_document.js:1:335
+    at Object.<anonymous> (/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/pages/_document.js:1:376)
+    at Module._compile (node:internal/modules/cjs/loader:1706:14)
+    at Object..js (node:internal/modules/cjs/loader:1839:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1463:12)
+    at mod.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:147:16)
+    at requirePage (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js:109:84)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js:72:65
+    at async Promise.all (index 0)
+    at async loadComponentsImpl (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js:71:33)
+    at async DevServer.findPageComponentsImpl (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/next-server.js:714:36) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/pages/_document.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/router-server.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+ GET /en/ 500 in 113ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 37ms
+ GET /_next/static/chunks/fallback/webpack.js 404 in 61ms
+ GET /_next/static/chunks/fallback/main.js 404 in 46ms
+ GET /_next/static/chunks/fallback/react-refresh.js 404 in 45ms
+ GET /_next/static/chunks/fallback/pages/_app.js 404 in 45ms
+ GET /_next/static/chunks/fallback/pages/_error.js 404 in 44ms
+ ⨯ Error: Cannot find module './vendor-chunks/next.js'
+Require stack:
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/app/[locale]/page.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1383:15)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:55:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+    at Function._load (node:internal/modules/cjs/loader:1192:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1463:12)
+    at mod.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:147:16) {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/app/[locale]/page.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/static-paths-worker.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/compiled/jest-worker/processChild.js'
+  ],
+  page: '/ja'
+}
+ ⨯ Error: Cannot find module './682.js'
+Require stack:
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/pages/_document.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/hot-middleware.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/router-server.js
+- /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/start-server.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1383:15)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:55:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+    at Function._load (node:internal/modules/cjs/loader:1192:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1463:12)
+    at mod.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:147:16)
+    at __webpack_require__.f.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js:198:28)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js:162:22)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/pages/_document.js:1:335
+    at Object.<anonymous> (/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/pages/_document.js:1:376)
+    at Module._compile (node:internal/modules/cjs/loader:1706:14)
+    at Object..js (node:internal/modules/cjs/loader:1839:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1463:12)
+    at mod.require (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:147:16)
+    at requirePage (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js:109:84)
+    at /Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js:72:65
+    at async Promise.all (index 0)
+    at async loadComponentsImpl (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js:71:33)
+    at async DevServer.findPageComponentsImpl (/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/next-server.js:714:36) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/webpack-runtime.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/.next/server/pages/_document.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/require.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/load-components.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/build/utils.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/router-server.js',
+    '/Users/projectdiscovery/bkk/siamsquad-nextjs/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+ GET /ja/ 500 in 223ms
+ GET /_next/static/chunks/fallback/webpack.js 404 in 63ms
+ GET /_next/static/chunks/fallback/react-refresh.js 404 in 59ms
+ GET /_next/static/chunks/fallback/main.js 404 in 61ms
+ GET /_next/static/chunks/fallback/pages/_app.js 404 in 58ms
+ GET /_next/static/chunks/fallback/pages/_error.js 404 in 58ms
+ HEAD / 404 in 246ms
+ ⨯ ./src/app/[locale]/page.tsx
+Error: 
+  [31mx[0m You're importing a component that needs useState. It only works in a Client Component but none of its parents are marked with "use client", so they're Server Components by default.
+  [31m|[0m Learn more: https://nextjs.org/docs/getting-started/react-essentials
+  [31m|[0m 
+  [31m|[0m 
+   ,-[[36;1;4m/Users/projectdiscovery/bkk/siamsquad-nextjs/src/app/[locale]/page.tsx[0m:1:1]
+ [2m1[0m | import { useState, useEffect } from 'react'
+   : [31;1m         ^^^^^^^^[0m
+ [2m2[0m | import { setRequestLocale } from 'next-intl/server'
+ [2m3[0m | import Header from '@/components/Header'
+ [2m4[0m | import HeroSection from '@/components/HeroSection'
+   `----
+
+  [31mx[0m You're importing a component that needs useEffect. It only works in a Client Component but none of its parents are marked with "use client", so they're Server Components by default.
+  [31m|[0m Learn more: https://nextjs.org/docs/getting-started/react-essentials
+  [31m|[0m 
+  [31m|[0m 
+   ,-[[36;1;4m/Users/projectdiscovery/bkk/siamsquad-nextjs/src/app/[locale]/page.tsx[0m:1:1]
+ [2m1[0m | import { useState, useEffect } from 'react'
+   : [31;1m                   ^^^^^^^^^[0m
+ [2m2[0m | import { setRequestLocale } from 'next-intl/server'
+ [2m3[0m | import Header from '@/components/Header'
+ [2m4[0m | import HeroSection from '@/components/HeroSection'
+   `----
+
+Import trace for requested module:
+./src/app/[locale]/page.tsx
+[?25h

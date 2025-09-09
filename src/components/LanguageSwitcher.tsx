@@ -7,9 +7,10 @@ import { ChevronDownIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const languages = [
-  { code: 'th', name: 'ไทย', flag: '🇹🇭' },
   { code: 'en', name: 'English', flag: '🇺🇸' },
-  { code: 'ja', name: '日本語', flag: '🇯🇵' }
+  { code: 'th', name: 'ไทย', flag: '🇹🇭' },
+  { code: 'ja', name: '日本語', flag: '🇯🇵' },
+  { code: 'zh', name: '中文', flag: '🇨🇳' }
 ];
 
 export default function LanguageSwitcher() {
@@ -22,7 +23,15 @@ export default function LanguageSwitcher() {
 
   const handleLanguageChange = (newLocale: string) => {
     // Remove current locale from pathname and add new locale
-    const pathWithoutLocale = pathname.replace(`/${locale}`, '');
+    const segments = pathname.split('/').filter(Boolean);
+    
+    // Remove the first segment if it's a locale
+    if (segments.length > 0 && ['en', 'th', 'ja', 'zh'].includes(segments[0])) {
+      segments.shift();
+    }
+    
+    // Create new path with new locale
+    const pathWithoutLocale = segments.length > 0 ? `/${segments.join('/')}` : '';
     const newPath = `/${newLocale}${pathWithoutLocale}`;
     router.push(newPath);
     setIsOpen(false);
@@ -47,7 +56,7 @@ export default function LanguageSwitcher() {
           <>
             {/* Backdrop */}
             <div 
-              className="fixed inset-0 z-40"
+              className="fixed inset-0 z-[55]"
               onClick={() => setIsOpen(false)}
             />
             
@@ -57,7 +66,7 @@ export default function LanguageSwitcher() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -10, scale: 0.95 }}
               transition={{ duration: 0.2 }}
-              className="absolute top-full mt-2 right-0 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden z-50 min-w-[160px]"
+              className="absolute top-full mt-2 right-0 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden z-[60] min-w-[160px]"
             >
               {languages.map((language) => (
                 <button

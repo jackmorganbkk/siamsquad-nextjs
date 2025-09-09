@@ -8,19 +8,20 @@ export default {
   theme: {
     extend: {
       colors: {
+        // ProjectDiscovery-inspired dark modern palette
         primary: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
+          50: '#f0f9ff',
+          100: '#e0f2fe',
+          200: '#bae6fd',
+          300: '#7dd3fc',
+          400: '#38bdf8',
+          500: '#0ea5e9',
+          600: '#0284c7',
+          700: '#0369a1',
+          800: '#075985',
+          900: '#0c4a6e',
         },
-        secondary: {
+        dark: {
           50: '#f8fafc',
           100: '#f1f5f9',
           200: '#e2e8f0',
@@ -31,18 +32,33 @@ export default {
           700: '#334155',
           800: '#1e293b',
           900: '#0f172a',
+          950: '#020617',
         },
         accent: {
-          50: '#fef7ff',
-          100: '#fceeff',
-          200: '#f8daff',
-          300: '#f3b9ff',
-          400: '#ec87ff',
-          500: '#e155ff',
-          600: '#d333f7',
-          700: '#b821db',
-          800: '#9a1bb3',
-          900: '#7e1a92',
+          50: '#f0fdf4',
+          100: '#dcfce7',
+          200: '#bbf7d0',
+          300: '#86efac',
+          400: '#4ade80',
+          500: '#22c55e',
+          600: '#16a34a',
+          700: '#15803d',
+          800: '#166534',
+          900: '#14532d',
+        },
+        // Neon accent colors
+        neon: {
+          blue: '#00d4ff',
+          green: '#00ff88',
+          purple: '#8b5cf6',
+          pink: '#f472b6',
+          orange: '#fb923c',
+        },
+        // Background gradients
+        bg: {
+          primary: '#0a0a0a',
+          secondary: '#111111',
+          tertiary: '#1a1a1a',
         }
       },
       fontFamily: {
@@ -87,8 +103,12 @@ export default {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'hero-gradient': 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)',
-        'card-gradient': 'linear-gradient(145deg, #ffffff 0%, #f8fafc 100%)',
+        'hero-gradient': 'linear-gradient(135deg, #0a0a0a 0%, #111111 50%, #1a1a1a 100%)',
+        'dark-gradient': 'linear-gradient(135deg, #020617 0%, #0f172a 50%, #1e293b 100%)',
+        'neon-gradient': 'linear-gradient(135deg, #00d4ff 0%, #8b5cf6 50%, #f472b6 100%)',
+        'accent-gradient': 'linear-gradient(135deg, #22c55e 0%, #16a34a 50%, #15803d 100%)',
+        'card-gradient': 'linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)',
+        'mesh-gradient': 'radial-gradient(at 40% 20%, #00d4ff 0px, transparent 50%), radial-gradient(at 80% 0%, #8b5cf6 0px, transparent 50%), radial-gradient(at 0% 50%, #f472b6 0px, transparent 50%)',
       },
       boxShadow: {
         'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',

@@ -1,9 +1,16 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function PerformanceOptimizer() {
+  const [isClient, setIsClient] = useState(false);
+
   useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isClient) return;
     // Preload critical resources
     const preloadCriticalResources = () => {
       // Preload fonts
@@ -167,7 +174,7 @@ export default function PerformanceOptimizer() {
       clsObserver.observe({ entryTypes: ['layout-shift'] });
     }
 
-  }, []);
+  }, [isClient]);
 
   return null;
 }

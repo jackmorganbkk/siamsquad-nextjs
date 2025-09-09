@@ -4,8 +4,8 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
  
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Enable static export for Cloudflare Pages
-  output: 'export',
+  // Enable static export for Cloudflare Pages (disabled for development)
+  // output: 'export',
   trailingSlash: true,
   
   // Enable experimental features for better performance

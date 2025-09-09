@@ -1,0 +1,130 @@
+{
+  "navigation": {
+    "home": "首页",
+    "process": "流程",
+    "services": "服务",
+    "portfolio": "作品集",
+    "contact": "联系我们"
+  },
+  "hero": {
+    "badge": "专业数字解决方案",
+    "title": "专业数字解决方案",
+    "subtitle": "为泰国企业创建精美的网站、移动应用和数字营销解决方案，帮助您在线成长和成功",
+    "cta_quote": "获取免费报价",
+    "cta_portfolio": "查看作品集",
+    "stats": {
+      "projects": "项目",
+      "uptime": "正常运行时间",
+      "support": "支持",
+      "years": "年"
+    },
+    "scroll_text": "探索解决方案"
+  },
+  "process": {
+    "title": "我们如何与您合作",
+    "subtitle": "我们简单的6步流程，将您的数字愿景变为现实",
+    "steps": {
+      "discovery": {
+        "title": "发现",
+        "heading": "了解您的业务需求",
+        "description": "我们首先倾听您的目标，准确了解您的业务需求。我们讨论您的要求、预算和时间表，为您的项目制定完美的计划。",
+        "duration": "1-2周"
+      },
+      "design": {
+        "title": "设计",
+        "heading": "创建美观且用户友好的设计",
+        "description": "我们的设计师创建您的客户会喜欢的美观、现代的布局。我们专注于让所有设备上的一切都易于使用且视觉吸引人。",
+        "duration": "2-3周"
+      },
+      "development": {
+        "title": "开发",
+        "heading": "使用现代技术构建您的解决方案",
+        "description": "我们经验丰富的开发人员使用最新、可靠的技术将设计变为现实。我们逐步构建一切，并让您了解我们的进展。",
+        "duration": "4-8周"
+      },
+      "testing": {
+        "title": "测试",
+        "heading": "确保一切完美运行",
+        "description": "我们彻底测试一切，确保在所有设备和浏览器上完美运行。我们检查速度、安全性和用户体验，确保顶级质量。",
+        "duration": "1-2周"
+      },
+      "deployment": {
+        "title": "部署",
+        "heading": "启动您的项目",
+        "description": "我们处理所有技术设置，让您的网站或应用程序上线并顺利运行。我们确保一切安全、快速，为您的客户做好准备。",
+        "duration": "3-5天"
+      },
+      "support": {
+        "title": "支持",
+        "heading": "持续关怀和维护",
+        "description": "我们提供持续支持，确保一切顺利运行。定期更新、安全监控，以及您需要时的技术协助。",
+        "duration": "持续"
+      }
+    }
+  },
+  "services": {
+    "title": "我们能为您做什么",
+    "subtitle": "完整的数字服务，帮助您的企业在当今的在线世界中蓬勃发展",
+    "items": {
+      "web_development": {
+        "title": "网站开发",
+        "description": "美观、快速加载的网站，在所有设备上完美运行。",
+        "tech": "React, Next.js, 移动优先, SEO",
+        "metrics": "超快速"
+      },
+      "custom_software": {
+        "title": "定制软件",
+        "description": "专为您的业务需求设计的定制软件解决方案。",
+        "tech": "定制构建, API, 数据库, 云",
+        "metrics": "始终在线"
+      },
+      "mobile_apps": {
+        "title": "移动应用",
+        "description": "您的客户会喜欢的移动应用和电子商务解决方案。",
+        "tech": "iOS, Android, React Native, Flutter",
+        "metrics": "用户友好"
+      },
+      "digital_marketing": {
+        "title": "数字营销",
+        "description": "通过我们的营销服务在线被发现并发展您的业务。",
+        "tech": "SEO, 社交媒体, 广告, 分析",
+        "metrics": "更多客户"
+      },
+      "performance": {
+        "title": "性能优化",
+        "description": "让您的网站闪电般快速，改善客户体验。",
+        "tech": "速度提升, CDN, 缓存, 优化",
+        "metrics": "闪电般快速"
+      },
+      "integration": {
+        "title": "系统集成",
+        "description": "将您的不同业务系统连接在一起，获得持续的技术支持。",
+        "tech": "系统连接, 数据同步, 24/7支持, 定期更新",
+        "metrics": "始终支持"
+      },
+      "cloud_solutions": {
+        "title": "云解决方案",
+        "description": "可扩展的云基础设施和部署服务。",
+        "tech": "AWS, Azure, Docker, Kubernetes",
+        "metrics": "高度可扩展"
+      },
+      "security": {
+        "title": "安全与合规",
+        "description": "全面的安全审计和合规解决方案。",
+        "tech": "安全审计, SSL, 合规, 监控",
+        "metrics": "安全"
+      }
+    }
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "发生错误",
+    "success": "成功",
+    "submit": "提交",
+    "cancel": "取消",
+    "close": "关闭",
+    "next": "下一个",
+    "previous": "上一个",
+    "learn_more": "了解更多"
+  }
+}

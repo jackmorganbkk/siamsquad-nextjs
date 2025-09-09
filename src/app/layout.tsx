@@ -79,7 +79,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable}`} suppressHydrationWarning>
+    <html lang="th" className={`${inter.variable} ${poppins.variable}`} suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -90,9 +90,7 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
       </head>
       <body className={`${inter.className} antialiased`} suppressHydrationWarning>
-        <div id="main-content" tabIndex={-1}>
-          {children}
-        </div>
+        {children}
         <Analytics googleAnalyticsId="G-XXXXXXXXXX" />
         <PerformanceOptimizer />
         <AccessibilityEnhancer />

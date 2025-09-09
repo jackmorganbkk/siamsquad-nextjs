@@ -3,11 +3,8 @@
 import { useState, useEffect } from 'react'
 import Header from '@/components/Header'
 import HeroSection from '@/components/HeroSection'
-import ProcessSection from '@/components/ProcessSection'
 import ServicesSection from '@/components/ServicesSection'
-import StatsSection from '@/components/StatsSection'
-import PortfolioSection from '@/components/PortfolioSection'
-import QuotationSection from '@/components/QuotationSection'
+import FeaturesSection from '@/components/FeaturesSection'
 import ContactSection from '@/components/ContactSection'
 import Footer from '@/components/Footer'
 import LoadingOverlay from '@/components/LoadingOverlay'
@@ -16,10 +13,10 @@ export default function HomePage() {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    // Simulate loading time
+    // Quick loading optimization - remove artificial delay
     const timer = setTimeout(() => {
       setIsLoading(false)
-    }, 2000)
+    }, 300) // Reduced from 2000ms to 300ms
 
     return () => clearTimeout(timer)
   }, [])
@@ -32,11 +29,8 @@ export default function HomePage() {
     <main className="relative">
       <Header />
       <HeroSection />
-      <ProcessSection />
       <ServicesSection />
-      <StatsSection />
-      <PortfolioSection />
-      <QuotationSection />
+      <FeaturesSection />
       <ContactSection />
       <Footer />
     </main>

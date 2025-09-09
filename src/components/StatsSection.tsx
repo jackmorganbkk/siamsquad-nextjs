@@ -13,11 +13,16 @@ const stats = [
 
 function CountUp({ end, duration = 2000 }: { end: number; duration?: number }) {
   const [count, setCount] = useState(0)
+  const [isClient, setIsClient] = useState(false)
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
 
   useEffect(() => {
-    if (!isInView) return
+    setIsClient(true)
+  }, [])
+
+  useEffect(() => {
+    if (!isInView || !isClient) return
 
     let startTime: number
     const startCount = 0
@@ -34,9 +39,9 @@ function CountUp({ end, duration = 2000 }: { end: number; duration?: number }) {
     }
 
     requestAnimationFrame(updateCount)
-  }, [isInView, end, duration])
+  }, [isInView, end, duration, isClient])
 
-  return <span ref={ref}>{count}</span>
+  return <span ref={ref} suppressHydrationWarning>{isClient ? count : 0}</span>
 }
 
 export default function StatsSection() {

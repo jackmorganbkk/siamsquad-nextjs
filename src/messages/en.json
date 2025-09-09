@@ -67,40 +67,52 @@
     "subtitle": "Complete digital services to help your business thrive in today's online world",
     "items": {
       "web_development": {
-        "title": "Professional Website Development",
-        "description": "Beautiful, fast-loading websites that work perfectly on all devices. We build modern websites that help your business grow online with reliable hosting and ongoing support.",
-        "tech": ["Modern Design", "Mobile-Friendly", "Fast Loading", "Secure"],
+        "title": "Website Development",
+        "description": "Beautiful, fast-loading websites that work perfectly on all devices.",
+        "tech": "React, Next.js, Mobile-First, SEO",
         "metrics": "Super Fast"
       },
       "custom_software": {
-        "title": "Custom Business Software",
-        "description": "Tailored software solutions designed specifically for your business needs. From inventory management to customer systems, we create tools that make your work easier and more efficient.",
-        "tech": ["Custom Built", "User-Friendly", "Reliable", "Scalable"],
+        "title": "Custom Software",
+        "description": "Tailored software solutions designed specifically for your business needs.",
+        "tech": "Custom Built, API, Database, Cloud",
         "metrics": "Always Online"
       },
       "mobile_apps": {
-        "title": "Mobile Apps & Online Stores",
-        "description": "Mobile apps and e-commerce websites that your customers will love. Easy to use, secure payment processing, and works seamlessly across all devices and platforms.",
-        "tech": ["iOS & Android", "E-commerce", "Secure Payments", "Easy to Use"],
-        "metrics": "Loved by Users"
+        "title": "Mobile Apps",
+        "description": "Mobile apps and e-commerce solutions that your customers will love.",
+        "tech": "iOS, Android, React Native, Flutter",
+        "metrics": "User Friendly"
       },
       "digital_marketing": {
-        "title": "Digital Marketing & SEO",
-        "description": "Get found online and grow your business with our digital marketing services. We help improve your website's visibility on Google and create effective social media campaigns.",
-        "tech": ["Google SEO", "Social Media", "Online Ads", "Analytics"],
+        "title": "Digital Marketing",
+        "description": "Get found online and grow your business with our marketing services.",
+        "tech": "SEO, Social Media, Ads, Analytics",
         "metrics": "More Customers"
       },
       "performance": {
-        "title": "Website Speed & Performance",
-        "description": "Make your website lightning fast and improve customer experience. Faster websites rank better on Google, keep visitors happy, and convert more customers.",
-        "tech": ["Speed Boost", "Better Rankings", "Happy Visitors", "More Sales"],
+        "title": "Performance Optimization",
+        "description": "Make your website lightning fast and improve customer experience.",
+        "tech": "Speed Boost, CDN, Caching, Optimization",
         "metrics": "Lightning Fast"
       },
       "integration": {
-        "title": "System Integration & Support",
-        "description": "Connect your different business systems together and get ongoing technical support. We help your tools work together smoothly and provide reliable maintenance.",
-        "tech": ["System Connect", "Data Sync", "24/7 Support", "Regular Updates"],
+        "title": "System Integration",
+        "description": "Connect your different business systems together and get ongoing technical support.",
+        "tech": "System Connect, Data Sync, 24/7 Support, Regular Updates",
         "metrics": "Always Supported"
+      },
+      "cloud_solutions": {
+        "title": "Cloud Solutions",
+        "description": "Scalable cloud infrastructure and deployment services.",
+        "tech": "AWS, Azure, Docker, Kubernetes",
+        "metrics": "Highly Scalable"
+      },
+      "security": {
+        "title": "Security & Compliance",
+        "description": "Comprehensive security audits and compliance solutions.",
+        "tech": "Security Audit, SSL, Compliance, Monitoring",
+        "metrics": "Secure"
       }
     }
   },

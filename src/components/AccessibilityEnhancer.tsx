@@ -8,8 +8,11 @@ export default function AccessibilityEnhancer() {
   const [fontSize, setFontSize] = useState(100);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [showAccessibilityPanel, setShowAccessibilityPanel] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   const applyAccessibilitySettings = useCallback(() => {
+    if (!isClient) return;
+    
     const root = document.documentElement;
 
     // Font size
@@ -31,9 +34,15 @@ export default function AccessibilityEnhancer() {
       root.classList.remove('reduce-motion');
     }
     localStorage.setItem('accessibility-reduced-motion', isReducedMotion.toString());
-  }, [isHighContrast, fontSize, isReducedMotion]);
+  }, [isHighContrast, fontSize, isReducedMotion, isClient]);
 
   useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isClient) return;
+
     // Check user preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
@@ -52,7 +61,7 @@ export default function AccessibilityEnhancer() {
 
     // Apply initial settings
     applyAccessibilitySettings();
-  }, [applyAccessibilitySettings]);
+  }, [isClient, applyAccessibilitySettings]);
 
   useEffect(() => {
     applyAccessibilitySettings();
@@ -74,6 +83,7 @@ export default function AccessibilityEnhancer() {
 
   // Skip to main content
   const skipToMain = () => {
+    if (!isClient) return;
     const mainContent = document.getElementById('main-content');
     if (mainContent) {
       mainContent.focus();
@@ -82,7 +92,7 @@ export default function AccessibilityEnhancer() {
   };
 
   return (
-    <>
+    <div suppressHydrationWarning>
       {/* Skip to main content link */}
       <button
         onClick={skipToMain}
@@ -265,6 +275,6 @@ export default function AccessibilityEnhancer() {
           box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
         }
       `}</style>
-    </>
+    </div>
   );
 }
