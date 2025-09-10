@@ -4,10 +4,14 @@ import { useState, useEffect } from 'react'
 import Header from '@/components/Header'
 import HeroSection from '@/components/HeroSection'
 import ServicesSection from '@/components/ServicesSection'
+import PortfolioSection from '@/components/PortfolioSection'
+import TestimonialsSection from '@/components/TestimonialsSection'
+import ProcessSection from '@/components/ProcessSection'
 import FeaturesSection from '@/components/FeaturesSection'
 import ContactSection from '@/components/ContactSection'
 import Footer from '@/components/Footer'
 import LoadingOverlay from '@/components/LoadingOverlay'
+import PerformanceOptimizer from '@/components/PerformanceOptimizer'
 
 export default function HomePage() {
   const [isLoading, setIsLoading] = useState(true)
@@ -27,9 +31,13 @@ export default function HomePage() {
 
   return (
     <main className="relative">
+      <PerformanceOptimizer />
       <Header />
       <HeroSection />
       <ServicesSection />
+      <PortfolioSection />
+      <ProcessSection />
+      <TestimonialsSection />
       <FeaturesSection />
       <ContactSection />
       <Footer />

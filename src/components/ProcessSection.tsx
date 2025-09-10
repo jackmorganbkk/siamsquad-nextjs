@@ -54,23 +54,29 @@ export default function ProcessSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="process" className="section-padding bg-white">
-      <div className="container-custom">
+    <section id="process" className="section-padding bg-bg-secondary relative overflow-hidden">
+      {/* Subtle Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 left-10 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-10 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-secondary-800 mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-4">
             How We Work With You
           </h2>
-          <p className="text-lg md:text-xl text-secondary-600 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto">
             Our simple 6-step process to bring your digital vision to life
           </p>
         </motion.div>
 
-        <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {processSteps.map((step, index) => (
             <motion.div
               key={step.title}
@@ -79,47 +85,37 @@ export default function ProcessSection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group relative"
             >
-              <div className="bg-card-gradient rounded-2xl p-8 shadow-soft card-hover border border-gray-100 h-full relative overflow-hidden">
-                {/* Background Pattern */}
-                <div className="absolute top-0 right-0 w-20 h-20 opacity-5">
-                  <div className="text-6xl">{step.icon}</div>
-                </div>
-
+              <div className="dark-card rounded-xl p-6 h-full relative overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300">
                 {/* Step Number */}
-                <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-r from-primary-600 to-primary-700 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                <div className="absolute -top-3 -left-3 w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
                   {index + 1}
                 </div>
 
                 {/* Duration Badge */}
-                <div className="absolute top-4 right-4 bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">
+                <div className="absolute top-4 right-4 bg-white/10 text-white/80 px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm">
                   {step.duration}
                 </div>
 
                 {/* Step Header */}
-                <div className="mb-6 mt-4">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="text-2xl">{step.icon}</div>
-                    <div className="inline-block bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-semibold">
+                <div className="mb-4 mt-2">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="text-xl">{step.icon}</div>
+                    <div className="inline-block bg-white/10 text-white/90 px-3 py-1 rounded-full text-xs font-medium">
                       {step.title}
                     </div>
                   </div>
-                  <h3 className="text-xl font-heading font-semibold text-secondary-800 mb-3 group-hover:text-primary-700 transition-colors duration-300">
+                  <h3 className="text-lg font-heading font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
                     {step.heading}
                   </h3>
                 </div>
 
                 {/* Step Description */}
-                <p className="text-secondary-600 leading-relaxed">
+                <p className="text-white/70 leading-relaxed text-sm">
                   {step.description}
                 </p>
 
-                {/* Progress Line */}
-                <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-primary-500 to-primary-600 group-hover:w-full transition-all duration-700" />
-
-                {/* Connecting Line (except for last item) */}
-                {index < processSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-primary-300 to-primary-500 transform -translate-y-1/2" />
-                )}
+                {/* Subtle Progress Line */}
+                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-blue-600 group-hover:w-full transition-all duration-500" />
               </div>
             </motion.div>
           ))}

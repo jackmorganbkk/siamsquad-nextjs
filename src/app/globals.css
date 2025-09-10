@@ -124,6 +124,151 @@
     background-size: 200% 200%;
     animation: gradient-shift 3s ease-in-out infinite;
   }
+
+  /* Enhanced Perspective and 3D Effects */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  /* Enhanced Glow Effects */
+  .glow-blue {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3),
+                0 0 40px rgba(59, 130, 246, 0.2),
+                0 0 60px rgba(59, 130, 246, 0.1);
+  }
+  
+  .glow-purple {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3),
+                0 0 40px rgba(139, 92, 246, 0.2),
+                0 0 60px rgba(139, 92, 246, 0.1);
+  }
+  
+  .glow-green {
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.3),
+                0 0 40px rgba(34, 197, 94, 0.2),
+                0 0 60px rgba(34, 197, 94, 0.1);
+  }
+  
+  .glow-pink {
+    box-shadow: 0 0 20px rgba(244, 114, 182, 0.3),
+                0 0 40px rgba(244, 114, 182, 0.2),
+                0 0 60px rgba(244, 114, 182, 0.1);
+  }
+
+  /* Enhanced Text Effects */
+  .text-glow-blue {
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.8),
+                 0 0 20px rgba(59, 130, 246, 0.6),
+                 0 0 30px rgba(59, 130, 246, 0.4);
+  }
+  
+  .text-glow-purple {
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.8),
+                 0 0 20px rgba(139, 92, 246, 0.6),
+                 0 0 30px rgba(139, 92, 246, 0.4);
+  }
+
+  /* Shimmer and Shine Effects */
+  .shimmer {
+    background: linear-gradient(110deg, transparent 40%, rgba(255, 255, 255, 0.5) 50%, transparent 60%);
+    background-size: 200% 100%;
+  }
+  
+  .text-shimmer {
+    background: linear-gradient(110deg, #00d4ff 45%, #ffffff 55%, #00d4ff 65%);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Cyber and Futuristic Gradients */
+  .cyber-gradient {
+    background: linear-gradient(135deg, #00d4ff 0%, #8b5cf6 25%, #f472b6 50%, #fb923c 75%, #00ff88 100%);
+    background-size: 400% 400%;
+  }
+  
+  .aurora-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  .mesh-gradient {
+    background: radial-gradient(at 40% 20%, #00d4ff 0px, transparent 50%), 
+                radial-gradient(at 80% 0%, #8b5cf6 0px, transparent 50%), 
+                radial-gradient(at 0% 50%, #f472b6 0px, transparent 50%);
+  }
+
+  /* Enhanced Card Effects */
+  .card-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-3d:hover {
+    transform: rotateY(5deg) rotateX(5deg);
+  }
+  
+  .magnetic-hover {
+    transition: transform 0.2s ease;
+  }
+  
+  .magnetic-hover:hover {
+    transform: translate(var(--mouse-x, 0), var(--mouse-y, 0)) scale(1.05);
+  }
+
+  /* Floating and Animation Utilities */
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .float-delayed {
+    animation: float 6s ease-in-out infinite 2s;
+  }
+  
+  .glow-pulse {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+  
+  .text-flicker {
+    animation: neon-flicker 2s infinite alternate;
+  }
+  
+  .border-glow {
+    border: 1px solid transparent;
+    background: linear-gradient(var(--bg-color, #1a1a1a), var(--bg-color, #1a1a1a)) padding-box,
+                linear-gradient(135deg, #00d4ff, #8b5cf6, #f472b6) border-box;
+  }
+
+  /* Interactive Elements */
+  .interactive-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .interactive-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3),
+                0 0 30px rgba(0, 212, 255, 0.2);
+  }
+
+  /* Particle and Tech Effects */
+  .tech-grid {
+    background-image: 
+      linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  
+  .circuit-pattern {
+    background-image: 
+      radial-gradient(circle at 25px 25px, rgba(0, 212, 255, 0.2) 2px, transparent 2px),
+      linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px, 50px 50px, 50px 50px;
+  }
 }
 
 /* Custom scrollbar */
