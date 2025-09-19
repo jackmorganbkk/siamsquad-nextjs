@@ -30,7 +30,6 @@ export async function generateMetadata({
 }: {
   params: { locale: string }
 }): Promise<Metadata> {
-  const messages = await getMessages();
   
   const titles = {
     th: "SiamSquad - โซลูชันดิจิทัลมืออาชีพ | บางกอก ประเทศไทย",

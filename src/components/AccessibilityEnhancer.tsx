@@ -15,24 +15,30 @@ export default function AccessibilityEnhancer() {
     
     const root = document.documentElement;
 
-    // Font size
-    root.style.fontSize = `${fontSize}%`;
+    // Font size - apply more smoothly
+    requestAnimationFrame(() => {
+      root.style.fontSize = `${fontSize}%`;
+    });
     localStorage.setItem('accessibility-font-size', fontSize.toString());
 
-    // High contrast
-    if (isHighContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
+    // High contrast - apply more smoothly
+    requestAnimationFrame(() => {
+      if (isHighContrast) {
+        root.classList.add('high-contrast');
+      } else {
+        root.classList.remove('high-contrast');
+      }
+    });
     localStorage.setItem('accessibility-high-contrast', isHighContrast.toString());
 
-    // Reduced motion
-    if (isReducedMotion) {
-      root.classList.add('reduce-motion');
-    } else {
-      root.classList.remove('reduce-motion');
-    }
+    // Reduced motion - apply more smoothly
+    requestAnimationFrame(() => {
+      if (isReducedMotion) {
+        root.classList.add('reduce-motion');
+      } else {
+        root.classList.remove('reduce-motion');
+      }
+    });
     localStorage.setItem('accessibility-reduced-motion', isReducedMotion.toString());
   }, [isHighContrast, fontSize, isReducedMotion, isClient]);
 
@@ -120,13 +126,13 @@ export default function AccessibilityEnhancer() {
             initial={{ opacity: 0, x: 300 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 300 }}
-            className="fixed bottom-20 right-4 z-50 bg-white rounded-lg shadow-xl border border-gray-200 p-6 w-80 max-w-[calc(100vw-2rem)]"
+            className="fixed bottom-20 right-4 z-50 bg-gray-900/95 backdrop-blur-sm rounded-lg shadow-xl border border-gray-700 p-6 w-80 max-w-[calc(100vw-2rem)] text-white"
           >
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-semibold text-gray-900">Accessibility Options</h3>
+              <h3 className="text-lg font-semibold text-white">Accessibility Options</h3>
               <button
                 onClick={() => setShowAccessibilityPanel(false)}
-                className="text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500 rounded"
+                className="text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
                 aria-label="Close accessibility panel"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -138,23 +144,23 @@ export default function AccessibilityEnhancer() {
             <div className="space-y-4">
               {/* Font Size Controls */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-white mb-2">
                   Font Size: {fontSize}%
                 </label>
                 <div className="flex items-center gap-2">
                   <button
                     onClick={decreaseFontSize}
-                    className="px-3 py-1 bg-gray-200 text-gray-700 rounded hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                    className="px-3 py-1 bg-gray-700 text-white rounded hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     aria-label="Decrease font size"
                   >
                     A-
                   </button>
-                  <div className="flex-1 text-center text-sm text-gray-600">
+                  <div className="flex-1 text-center text-sm text-gray-300">
                     {fontSize}%
                   </div>
                   <button
                     onClick={increaseFontSize}
-                    className="px-3 py-1 bg-gray-200 text-gray-700 rounded hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                    className="px-3 py-1 bg-gray-700 text-white rounded hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     aria-label="Increase font size"
                   >
                     A+
@@ -164,14 +170,14 @@ export default function AccessibilityEnhancer() {
 
               {/* High Contrast Toggle */}
               <div className="flex items-center justify-between">
-                <label htmlFor="high-contrast" className="text-sm font-medium text-gray-700">
+                <label htmlFor="high-contrast" className="text-sm font-medium text-white">
                   High Contrast
                 </label>
                 <button
                   id="high-contrast"
                   onClick={() => setIsHighContrast(!isHighContrast)}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 ${
-                    isHighContrast ? 'bg-primary-600' : 'bg-gray-200'
+                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
+                    isHighContrast ? 'bg-blue-600' : 'bg-gray-600'
                   }`}
                   role="switch"
                   aria-checked={isHighContrast}
@@ -186,14 +192,14 @@ export default function AccessibilityEnhancer() {
 
               {/* Reduced Motion Toggle */}
               <div className="flex items-center justify-between">
-                <label htmlFor="reduced-motion" className="text-sm font-medium text-gray-700">
+                <label htmlFor="reduced-motion" className="text-sm font-medium text-white">
                   Reduce Motion
                 </label>
                 <button
                   id="reduced-motion"
                   onClick={() => setIsReducedMotion(!isReducedMotion)}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 ${
-                    isReducedMotion ? 'bg-primary-600' : 'bg-gray-200'
+                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
+                    isReducedMotion ? 'bg-blue-600' : 'bg-gray-600'
                   }`}
                   role="switch"
                   aria-checked={isReducedMotion}
@@ -209,7 +215,7 @@ export default function AccessibilityEnhancer() {
               {/* Reset Button */}
               <button
                 onClick={resetSettings}
-                className="w-full px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-colors"
+                className="w-full px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
               >
                 Reset to Default
               </button>

@@ -66,22 +66,22 @@ export default function LanguageSwitcher() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -10, scale: 0.95 }}
               transition={{ duration: 0.2 }}
-              className="absolute top-full mt-2 right-0 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden z-[60] min-w-[160px]"
+              className="absolute top-full mt-2 right-0 bg-gray-900/95 backdrop-blur-sm rounded-lg shadow-xl border border-gray-700 overflow-hidden z-[60] min-w-[160px]"
             >
               {languages.map((language) => (
                 <button
                   key={language.code}
                   onClick={() => handleLanguageChange(language.code)}
-                  className={`w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-gray-50 transition-colors duration-200 ${
+                  className={`w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-gray-800 transition-colors duration-200 ${
                     language.code === locale 
-                      ? 'bg-primary-50 text-primary-700 border-r-2 border-primary-500' 
-                      : 'text-gray-700'
+                      ? 'bg-gray-800 text-blue-400 border-r-2 border-blue-500' 
+                      : 'text-white'
                   }`}
                 >
                   <span className="text-lg">{language.flag}</span>
                   <span className="font-medium">{language.name}</span>
                   {language.code === locale && (
-                    <div className="ml-auto w-2 h-2 bg-primary-500 rounded-full" />
+                    <div className="ml-auto w-2 h-2 bg-blue-500 rounded-full" />
                   )}
                 </button>
               ))}

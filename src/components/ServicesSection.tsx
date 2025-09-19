@@ -126,12 +126,11 @@ const ServiceCard = ({ service, index }: { service: typeof services[0], index: n
       }}
     >
       <motion.div 
-        className={`relative dark-card rounded-2xl p-6 sm:p-8 h-full flex flex-col items-center text-center border-2 border-transparent hover:border-${service.color}/50 transition-all duration-500 min-h-[280px] sm:min-h-[320px] overflow-hidden backdrop-blur-sm`}
+        className={`relative bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 sm:p-8 flex flex-col items-center text-center border border-gray-700 hover:border-gray-600 transition-all duration-500 h-[320px] w-[280px] overflow-hidden shadow-lg hover:shadow-xl`}
         animate={{
-          borderColor: isHovered ? `var(--${service.color})` : 'transparent',
           boxShadow: isHovered 
-            ? `0 0 30px rgba(0, 212, 255, 0.3), 0 0 60px rgba(139, 92, 246, 0.2)` 
-            : '0 4px 20px rgba(0, 0, 0, 0.1)',
+            ? `0 0 30px rgba(255, 255, 255, 0.1), 0 0 60px rgba(255, 255, 255, 0.05)` 
+            : '0 4px 20px rgba(0, 0, 0, 0.3)',
         }}
         transition={{ duration: 0.3 }}
       >
@@ -295,11 +294,11 @@ export default function ServicesSection() {
   const t = useTranslations('services')
 
   return (
-    <section id="services" className="section-padding bg-bg-primary relative overflow-hidden">
+    <section id="services" className="section-padding bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          className="absolute top-20 left-10 w-64 h-64 bg-neon-blue/5 rounded-full blur-3xl"
+          className="absolute top-20 left-10 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"
           animate={{
             x: [0, 100, 0],
             y: [0, -50, 0],
@@ -312,7 +311,7 @@ export default function ServicesSection() {
           }}
         />
         <motion.div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-neon-purple/5 rounded-full blur-3xl"
+          className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"
           animate={{
             x: [0, -80, 0],
             y: [0, 60, 0],
@@ -320,6 +319,18 @@ export default function ServicesSection() {
           }}
           transition={{
             duration: 25,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+        <motion.div
+          className="absolute top-1/2 left-1/2 w-32 h-32 bg-teal-500/8 rounded-full blur-2xl"
+          animate={{
+            rotate: [0, 360],
+            scale: [1, 1.3, 1],
+          }}
+          transition={{
+            duration: 30,
             repeat: Infinity,
             ease: "linear",
           }}
@@ -379,11 +390,51 @@ export default function ServicesSection() {
           </motion.p>
         </motion.div>
 
-        {/* Enhanced Services Grid */}
-        <div ref={ref} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-          {services.map((service, index) => (
-            <ServiceCard key={service.key} service={service} index={index} />
-          ))}
+        {/* Film Roll Services */}
+        <div ref={ref} className="relative overflow-hidden">
+          {/* Film Roll Container */}
+          <motion.div 
+            className="flex gap-6 pb-6"
+            animate={{
+              x: [`0px`, `-${services.length * 344}px`], // 320px card + 24px gap = 344px per service
+            }}
+            transition={{
+              duration: 30,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            style={{
+              width: `${services.length * 2 * 344}px`, // Double width for seamless loop
+            }}
+          >
+            {services.map((service, index) => (
+              <div key={service.key} className="flex-shrink-0">
+                <ServiceCard service={service} index={index} />
+              </div>
+            ))}
+            {/* Duplicate for seamless loop */}
+            {services.map((service, index) => (
+              <div key={`duplicate-${service.key}`} className="flex-shrink-0">
+                <ServiceCard service={service} index={index + services.length} />
+              </div>
+            ))}
+          </motion.div>
+          
+          {/* Film Perforations */}
+          <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+          <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+          
+          {/* Film Holes */}
+          <div className="absolute top-1 left-0 right-0 flex justify-between">
+            {Array.from({ length: 20 }).map((_, i) => (
+              <div key={i} className="w-1 h-1 bg-white/20 rounded-full"></div>
+            ))}
+          </div>
+          <div className="absolute bottom-1 left-0 right-0 flex justify-between">
+            {Array.from({ length: 20 }).map((_, i) => (
+              <div key={i} className="w-1 h-1 bg-white/20 rounded-full"></div>
+            ))}
+          </div>
         </div>
 
       </div>

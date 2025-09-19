@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config} */ 
 export default {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,101 +8,67 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Enhanced modern palette with more vibrant colors
+        // PROFESSIONAL PALETTE - Digital Silk Inspired
         primary: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
+          50: '#f8fafc',   // Very light gray
+          100: '#f1f5f9',  // Light gray
+          200: '#e2e8f0',  // Medium light gray
+          300: '#cbd5e1',  // Medium gray
+          400: '#94a3b8',  // Gray
+          500: '#64748b',  // Dark gray
+          600: '#475569',  // Darker gray
+          700: '#334155',  // Very dark gray
+          800: '#1e293b',  // Charcoal
+          900: '#0f172a',  // Near black
         },
-        dark: {
-          50: '#f8fafc',
-          100: '#f1f5f9',
-          200: '#e2e8f0',
-          300: '#cbd5e1',
-          400: '#94a3b8',
-          500: '#64748b',
-          600: '#475569',
-          700: '#334155',
-          800: '#1e293b',
-          900: '#0f172a',
-          950: '#020617',
-        },
+        // ACCENT COLORS - Professional with subtle variety
         accent: {
-          50: '#f0fdf4',
-          100: '#dcfce7',
-          200: '#bbf7d0',
-          300: '#86efac',
-          400: '#4ade80',
-          500: '#22c55e',
-          600: '#16a34a',
-          700: '#15803d',
-          800: '#166534',
-          900: '#14532d',
+          50: '#eff6ff',
+          100: '#dbeafe', 
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
+          500: '#3b82f6',  // Main accent blue
+          600: '#2563eb',
+          700: '#1d4ed8',
+          800: '#1e40af',
+          900: '#1e3a8a',
         },
-        // Professional color palette (reduced brightness)
-        neon: {
+        // SUBTLE SECONDARY COLORS
+        secondary: {
           blue: '#3b82f6',
-          green: '#10b981',
-          purple: '#6366f1',
-          pink: '#ec4899',
+          purple: '#8b5cf6', 
+          teal: '#14b8a6',
+          emerald: '#10b981',
           orange: '#f97316',
-          cyan: '#06b6d4',
-          violet: '#8b5cf6',
-          emerald: '#059669',
-          rose: '#e11d48',
-          amber: '#d97706',
+          pink: '#ec4899',
         },
-        // Background gradients
+        // DARK BACKGROUNDS
         bg: {
-          primary: '#0a0a0a',
-          secondary: '#111111',
-          tertiary: '#1a1a1a',
-          card: 'rgba(255, 255, 255, 0.03)',
+          primary: '#0a0a0a',     // Very dark background
+          secondary: '#111111',   // Dark gray
+          tertiary: '#1a1a1a',    // Medium dark gray
+          dark: '#1e293b',        // Dark sections
+        },
+        // TEXT COLORS
+        text: {
+          primary: '#ffffff',     // White for main text
+          secondary: '#e2e8f0',   // Light gray for secondary text
+          muted: '#cbd5e1',       // Medium gray for muted text
+          white: '#ffffff',       // White text for dark backgrounds
         }
       },
       fontFamily: {
         'sans': ['Inter', 'system-ui', 'sans-serif'],
-        'heading': ['Poppins', 'system-ui', 'sans-serif'],
-        'mono': ['JetBrains Mono', 'Fira Code', 'monospace'],
+        'heading': ['Inter', 'system-ui', 'sans-serif'], // Consistent font family
       },
       animation: {
-        // Enhanced animations
-        'float': 'float 6s ease-in-out infinite',
-        'float-delayed': 'float 6s ease-in-out infinite 2s',
-        'glow': 'glow 3s ease-in-out infinite alternate',
-        'glow-pulse': 'glowPulse 2s ease-in-out infinite',
+        // MINIMAL ANIMATIONS ONLY
+        'fade-in': 'fadeIn 0.6s ease-out',
         'slide-up': 'slideUp 0.6s ease-out',
-        'slide-down': 'slideDown 0.6s ease-out',
-        'slide-left': 'slideLeft 0.6s ease-out',
-        'slide-right': 'slideRight 0.6s ease-out',
-        'fade-in': 'fadeIn 0.8s ease-out',
-        'fade-in-up': 'fadeInUp 0.8s ease-out',
-        'scale-in': 'scaleIn 0.5s ease-out',
-        'scale-bounce': 'scaleBounce 0.6s ease-out',
-        'gradient-shift': 'gradientShift 3s ease-in-out infinite',
-        'gradient-x': 'gradientX 15s ease infinite',
-        'gradient-y': 'gradientY 15s ease infinite',
-        'gradient-xy': 'gradientXY 15s ease infinite',
-        'pulse-slow': 'pulse 3s ease-in-out infinite',
-        'pulse-fast': 'pulse 1s ease-in-out infinite',
-        'bounce-slow': 'bounce 3s infinite',
-        'wiggle': 'wiggle 1s ease-in-out infinite',
-        'spin-slow': 'spin 3s linear infinite',
-        'spin-reverse': 'spinReverse 1s linear infinite',
-        'tilt': 'tilt 10s infinite linear',
-        'morph': 'morph 8s ease-in-out infinite',
-        'flicker': 'flicker 3s linear infinite',
-        'neon-flicker': 'neonFlicker 2s infinite alternate',
-        'text-shimmer': 'textShimmer 2.5s ease-in-out infinite',
-        'border-beam': 'borderBeam 1.5s linear infinite',
-        'meteor': 'meteor 5s linear infinite',
+        'gentle-bounce': 'gentleBounce 2s ease-in-out infinite',
+        'glow': 'glow 2s ease-in-out infinite alternate',
+        'float': 'float 3s ease-in-out infinite',
       },
       keyframes: {
         float: {
@@ -112,6 +78,10 @@ export default {
         glow: {
           '0%': { textShadow: '0 0 10px rgba(59, 130, 246, 0.3)' },
           '100%': { textShadow: '0 0 20px rgba(59, 130, 246, 0.6), 0 0 30px rgba(59, 130, 246, 0.4)' },
+        },
+        gentleBounce: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-5px)' },
         },
         glowPulse: {
           '0%, 100%': { 

@@ -103,7 +103,7 @@ export default function QuotationSection() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
             onSubmit={handleSubmit(onSubmit)}
-            className="bg-white rounded-2xl p-8 shadow-soft border border-gray-100"
+            className="bg-gray-900/90 backdrop-blur-sm rounded-2xl p-8 shadow-soft border border-gray-700 text-white"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Name */}

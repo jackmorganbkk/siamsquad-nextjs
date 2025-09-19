@@ -77,7 +77,7 @@ export default function HeroSection() {
     <section 
       ref={containerRef}
       id="home" 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-bg-primary pt-16 sm:pt-20 md:pt-24 pb-16" 
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-bg-primary pt-16 sm:pt-20 md:pt-24 pb-16 gradient-overlay" 
       suppressHydrationWarning
     >
       {/* Enhanced Animated Background */}
@@ -288,7 +288,7 @@ export default function HeroSection() {
                 ease: "linear",
               }}
             >
-              <span className="bg-cyber bg-clip-text text-transparent animate-text-shimmer bg-[length:200%_100%]">
+              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-teal-400 bg-clip-text text-transparent animate-text-shimmer bg-[length:200%_100%] drop-shadow-lg">
                 {t('title')}
               </span>
             </motion.h1>
@@ -327,59 +327,13 @@ export default function HeroSection() {
             className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 px-4"
           >
             <motion.button
-              onClick={() => scrollToSection('#quotation')}
-              className="group relative bg-cyber text-white font-semibold px-8 sm:px-12 py-4 sm:py-5 rounded-xl overflow-hidden w-full sm:w-auto shadow-neon-strong"
-              whileHover={{ 
-                scale: 1.05,
-                boxShadow: '0 0 30px rgba(0, 212, 255, 0.8), 0 0 60px rgba(139, 92, 246, 0.6)',
-              }}
-              whileTap={{ scale: 0.95 }}
-              animate={{
-                boxShadow: [
-                  '0 0 20px rgba(0, 212, 255, 0.5)',
-                  '0 0 40px rgba(139, 92, 246, 0.7)',
-                  '0 0 20px rgba(0, 212, 255, 0.5)',
-                ],
-              }}
-              transition={{
-                boxShadow: { duration: 2, repeat: Infinity },
-              }}
-            >
-              <motion.span 
-                className="relative z-10 flex items-center gap-3"
-                animate={{
-                  textShadow: [
-                    '0 0 10px rgba(255, 255, 255, 0.8)',
-                    '0 0 20px rgba(0, 212, 255, 1)',
-                    '0 0 10px rgba(255, 255, 255, 0.8)',
-                  ],
-                }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                <RocketLaunchIcon className="w-6 h-6 animate-bounce-slow" />
-                {t('cta_quote')}
-              </motion.span>
-              <motion.div 
-                className="absolute inset-0 bg-shimmer opacity-0 group-hover:opacity-100"
-                animate={{
-                  x: ['-100%', '100%'],
-                }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  repeatDelay: 2,
-                }}
-              />
-            </motion.button>
-            
-            <motion.button
               onClick={() => scrollToSection('#portfolio')}
-              className="group relative border-2 border-neon-blue text-neon-blue font-semibold px-8 sm:px-12 py-4 sm:py-5 rounded-xl overflow-hidden hover:bg-neon-blue/10 w-full sm:w-auto backdrop-blur-sm"
+              className="group relative border-2 border-blue-400 text-blue-400 font-semibold px-8 sm:px-12 py-4 sm:py-5 rounded-xl overflow-hidden hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-purple-500/10 w-full sm:w-auto backdrop-blur-sm glow-blue"
               whileHover={{ 
                 scale: 1.05,
-                borderColor: '#00ff88',
-                color: '#00ff88',
-                boxShadow: '0 0 30px rgba(0, 255, 136, 0.6)',
+                borderColor: '#8b5cf6',
+                color: '#a855f7',
+                boxShadow: '0 0 30px rgba(139, 92, 246, 0.6), 0 0 60px rgba(59, 130, 246, 0.3)',
               }}
               whileTap={{ scale: 0.95 }}
             >

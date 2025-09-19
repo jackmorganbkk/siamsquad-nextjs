@@ -10,7 +10,8 @@
   
   body {
     @apply font-sans text-white bg-bg-primary overflow-x-hidden;
-    background: linear-gradient(135deg, #0a0a0a 0%, #111111 50%, #1a1a1a 100%);
+    background: linear-gradient(135deg, #0a0a0a 0%, #111111 30%, #1a1a1a 60%, #0f172a 100%);
+    background-attachment: fixed;
   }
 }
 
@@ -65,7 +66,25 @@
   }
   
   .glow-text {
-    @apply animate-glow;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  /* Enhanced glow effects */
+  .glow-blue {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3), 0 0 40px rgba(59, 130, 246, 0.1);
+  }
+  
+  .glow-purple {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3), 0 0 40px rgba(139, 92, 246, 0.1);
+  }
+  
+  .glow-teal {
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.3), 0 0 40px rgba(20, 184, 166, 0.1);
+  }
+  
+  /* Subtle gradient overlays */
+  .gradient-overlay {
+    background: linear-gradient(45deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 50%, rgba(20, 184, 166, 0.1) 100%);
   }
 }
 

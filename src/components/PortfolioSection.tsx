@@ -18,21 +18,21 @@ import {
 const portfolioItems = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
-    category: 'Web Development',
-    description: 'Modern e-commerce solution with AI-powered recommendations and real-time analytics',
-    tech: ['Next.js', 'TypeScript', 'Stripe', 'AI/ML'],
+    title: 'Professional Business Website',
+    category: 'Website Development',
+    description: 'Modern responsive websites with professional design, fast loading, and SEO optimization for business growth',
+    tech: ['Next.js', 'React', 'Tailwind CSS', 'SEO'],
     color: 'neon-blue',
     gradient: 'from-blue-500 via-purple-500 to-pink-500',
-    icon: ShoppingCartIcon,
+    icon: GlobeAltIcon,
     featured: true,
   },
   {
     id: 2,
-    title: 'Mobile Banking App',
-    category: 'Mobile Development',
-    description: 'Secure banking application with biometric authentication and real-time transactions',
-    tech: ['React Native', 'Node.js', 'PostgreSQL', 'Security'],
+    title: 'Custom Mobile Application',
+    category: 'Software or App Development',
+    description: 'Native and cross-platform mobile apps with intuitive UI/UX and robust backend integration',
+    tech: ['React Native', 'Flutter', 'Node.js', 'Firebase'],
     color: 'neon-green',
     gradient: 'from-green-500 via-emerald-500 to-teal-500',
     icon: DevicePhoneMobileIcon,
@@ -40,10 +40,10 @@ const portfolioItems = [
   },
   {
     id: 3,
-    title: 'Analytics Dashboard',
-    category: 'Data Visualization',
-    description: 'Real-time analytics platform with interactive charts and business intelligence',
-    tech: ['React', 'D3.js', 'Python', 'AWS'],
+    title: 'Search Engine Optimization',
+    category: 'SEO Management',
+    description: 'Comprehensive SEO strategies to improve search rankings, organic traffic, and online visibility',
+    tech: ['Google Analytics', 'SEMrush', 'Content Strategy', 'Technical SEO'],
     color: 'neon-purple',
     gradient: 'from-purple-500 via-violet-500 to-indigo-500',
     icon: ChartBarIcon,
@@ -51,18 +51,18 @@ const portfolioItems = [
   },
   {
     id: 4,
-    title: 'Cloud Infrastructure',
-    category: 'DevOps & Cloud',
-    description: 'Scalable cloud architecture with auto-scaling and cost optimization',
-    tech: ['AWS', 'Kubernetes', 'Terraform', 'Docker'],
+    title: 'Social Media Campaign',
+    category: 'Social Media Management',
+    description: 'Strategic social media management with content creation, community engagement, and performance analytics',
+    tech: ['Facebook Ads', 'Instagram', 'Content Creation', 'Analytics'],
     color: 'neon-orange',
     gradient: 'from-orange-500 via-amber-500 to-yellow-500',
-    icon: GlobeAltIcon,
+    icon: SparklesIcon,
     featured: false,
   },
 ]
 
-const categories = ['All', 'Web Development', 'Mobile Development', 'Data Visualization', 'DevOps & Cloud']
+const categories = ['All', 'Website Development', 'Software or App Development', 'SEO Management', 'Social Media Management']
 
 const PortfolioCard = ({ item, index }: { item: typeof portfolioItems[0], index: number }) => {
   const [isHovered, setIsHovered] = useState(false)

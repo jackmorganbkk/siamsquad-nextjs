@@ -91,7 +91,10 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} antialiased`} suppressHydrationWarning>
         {children}
-        <Analytics googleAnalyticsId="G-XXXXXXXXXX" />
+        <Analytics 
+          googleAnalyticsId="G-XXXXXXXXXX" 
+          metricoolHash="274726a82d3e8eabeefb8631bc24ae9" 
+        />
         <PerformanceOptimizer />
         <AccessibilityEnhancer />
       </body>

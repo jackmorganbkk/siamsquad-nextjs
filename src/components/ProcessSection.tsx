@@ -85,11 +85,40 @@ export default function ProcessSection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group relative"
             >
-              <div className="dark-card rounded-xl p-6 h-full relative overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300">
-                {/* Step Number */}
-                <div className="absolute -top-3 -left-3 w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
+              <motion.div 
+                className="dark-card rounded-xl p-6 h-full relative overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300"
+                animate={{
+                  boxShadow: [
+                    '0 4px 20px rgba(0, 0, 0, 0.1)',
+                    '0 8px 30px rgba(255, 255, 255, 0.1)',
+                    '0 4px 20px rgba(0, 0, 0, 0.1)',
+                  ],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  delay: index * 0.7,
+                }}
+              >
+                {/* Step Number with Reel Effect */}
+                <motion.div 
+                  className="absolute -top-3 -left-3 w-10 h-10 bg-gradient-to-r from-gray-700 to-gray-800 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg border border-gray-600"
+                  animate={{
+                    boxShadow: [
+                      '0 0 10px rgba(255, 255, 255, 0.3)',
+                      '0 0 20px rgba(255, 255, 255, 0.6)',
+                      '0 0 10px rgba(255, 255, 255, 0.3)',
+                    ],
+                    scale: [1, 1.1, 1],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    delay: index * 0.3,
+                  }}
+                >
                   {index + 1}
-                </div>
+                </motion.div>
 
                 {/* Duration Badge */}
                 <div className="absolute top-4 right-4 bg-white/10 text-white/80 px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm">
@@ -104,7 +133,7 @@ export default function ProcessSection() {
                       {step.title}
                     </div>
                   </div>
-                  <h3 className="text-lg font-heading font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
+                  <h3 className="text-lg font-heading font-semibold text-white mb-2 group-hover:text-gray-300 transition-colors duration-300">
                     {step.heading}
                   </h3>
                 </div>
@@ -114,9 +143,20 @@ export default function ProcessSection() {
                   {step.description}
                 </p>
 
-                {/* Subtle Progress Line */}
-                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-blue-600 group-hover:w-full transition-all duration-500" />
-              </div>
+                {/* Reel Progress Line */}
+                <motion.div 
+                  className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-gray-500 to-white"
+                  animate={{
+                    width: ['0%', '100%', '0%'],
+                    opacity: [0.3, 1, 0.3],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    delay: index * 0.5,
+                  }}
+                />
+              </motion.div>
             </motion.div>
           ))}
         </div>
